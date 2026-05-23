@@ -1,0 +1,68 @@
+version: '3.1'
+services:
+  web:
+    #image: odoo:17.0
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    command: odoo --dev xml -u minuru_website 
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=myodoo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+    # odoogiin datag hadgalna
+      - odoo-web-data:/var/lib/odoo
+      # config file etc> container dotor ni ingej uusgej bga
+      - ./config:/etc/odoo
+      # folder path . hereglegchiin nemelt addons
+      - ./minuru-web:/mnt/extra-addons
+      #  log info 
+      - ./log:/var/log/odoo
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=myodoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+    restart: unless-stopped
+    command:
+      - "postgres"
+      # ── Memory ──
+      - "-c"
+      - "shared_buffers=256MB"
+      - "-c"
+      - "effective_cache_size=1GB"
+      - "-c"
+      - "work_mem=16MB"
+      - "-c"
+      - "maintenance_work_mem=256MB"
+      # ── Autovacuum (aggressive for POS workload) ──
+      - "-c"
+      - "autovacuum_vacuum_scale_factor=0.02"
+      - "-c"
+      - "autovacuum_analyze_scale_factor=0.01"
+      - "-c"
+      - "autovacuum_vacuum_cost_delay=0"
+      - "-c"
+      - "autovacuum_naptime=15"
+      - "-c"
+      - "autovacuum_max_workers=4"
+      # ── Logging (vacuum debug) ──
+      - "-c"
+      - "log_autovacuum_min_duration=0"
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:

@@ -1,0 +1,88 @@
+// ============================================================
+// Minuru Motors — design tokens  v2
+// ============================================================
+
+// ── Colour palette ──────────────────────────────────────────
+$mn-bg:          #faf9f7;   // warm off-white — main bg
+$mn-surface:     #f5f2ee;   // slightly deeper — alternate sections
+$mn-surface-2:   #ede9e3;   // panels
+
+$mn-light:       #f0ece6;   // cream — Experience, Testimonials
+$mn-light-2:     #e8e3db;
+
+$mn-text:        #0e0c0a;   // near-black
+$mn-text-dark:   #1a1714;
+$mn-muted:       #7a726a;   // body muted
+$mn-muted-light: #a09890;
+
+$mn-gold:        #7a6035;
+$mn-gold-light:  #9e7c44;
+
+$mn-border:      #e5e0d8;
+$mn-border-mid:  #ccc6bc;
+
+$mn-white:       #ffffff;
+$mn-white-warm:  #faf7f2;
+
+$mn-dark:        #090807;
+$mn-dark-2:      #111010;
+
+// ── Spacing scale (8-point grid) ────────────────────────────
+// All section padding, gaps and margins derived from this.
+$sp-1:  0.5rem;   //  8px
+$sp-2:  1rem;     // 16px
+$sp-3:  1.5rem;   // 24px
+$sp-4:  2rem;     // 32px
+$sp-5:  2.5rem;   // 40px
+$sp-6:  3rem;     // 48px
+$sp-7:  4rem;     // 64px
+$sp-8:  5rem;     // 80px
+$sp-9:  6rem;     // 96px
+$sp-10: 7.5rem;   // 120px
+$sp-11: 9rem;     // 144px
+$sp-12: 10.5rem;  // 168px
+
+// Section vertical padding — desktop / tablet / mobile
+$section-py:    $sp-11;   // 9rem  (~144px)
+$section-py-md: $sp-8;    // 5rem
+$section-py-sm: $sp-7;    // 4rem
+
+// Horizontal container padding — desktop / tablet / mobile
+$container-px:    $sp-9;   // 6rem
+$container-px-md: $sp-5;   // 2.5rem
+$container-px-sm: $sp-3;   // 1.5rem
+
+// ── Typography scale ─────────────────────────────────────────
+// Display (hero h1)
+$t-display-min: 3.25rem;
+$t-display-max: 6.5rem;
+
+// Section heading h2
+$t-h2-min: 2rem;
+$t-h2-max: 3rem;
+
+// Section heading large (experience title etc.)
+$t-h2-lg-min: 2.4rem;
+$t-h2-lg-max: 3.75rem;
+
+// Card title
+$t-card: 1.4rem;
+
+// Label (eyebrow)
+$t-label: 0.6rem;
+
+// Body
+$t-body: 0.875rem;
+$t-body-sm: 0.8rem;
+
+// Caption / meta
+$t-caption: 0.68rem;
+$t-micro:   0.58rem;
+
+// ── Easing ──────────────────────────────────────────────────
+$ease-out:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+
+// ── Border radius ───────────────────────────────────────────
+$radius-sm: 2px;
+$radius:    4px;

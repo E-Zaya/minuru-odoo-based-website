@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Google Fonts: Cormorant Garamond + DM Sans -->
+<template id="mn_google_fonts" inherit_id="website.layout" name="Minuru Google Fonts">
+    <xpath expr="//head" position="inside">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;display=swap" rel="stylesheet"/>
+    </xpath>
+</template>
+
+<!-- =========================================================
+     Minuru Motors — Full Homepage
+     Design: Black Tomato-inspired dark editorial luxury
+     Sections: Hero · Expeditions(9) · Experience · Routes
+               Fleet · Gallery · Testimonials · About · Contact
+     ========================================================= -->
+<template id="homepage" inherit_id="website.homepage" name="Minuru Homepage">
+<xpath expr="//div[@id='wrap']" position="replace">
+<div id="wrap" class="mn-wrap">
+
+    <t t-call="minuru_website.shared_navbar"/>
+
+    <!-- ====================================================
+         HERO
+         ==================================================== -->
+    <section id="home" class="mn-hero">
+        <video class="mn-hero-bg" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="auto">
+            <source src="/minuru_website/static/src/img/hero-video.mp4" type="video/mp4"/>
+        </video>
+        <div class="mn-hero-overlay"/>
+        <div class="mn-hero-content">
+            <div class="mn-hero-left">
+                <p class="mn-hero-label mn-reveal">
+                    <span class="lang-en">Mongolia &#183; Private Expeditions</span>
+                    <span class="lang-mn">Монгол &#183; Хувийн Аяллууд</span>
+                </p>
+                <h1 class="mn-hero-h1 mn-reveal mn-reveal-delay-1">
+                    <span><span class="lang-en">Travel</span><span class="lang-mn">Хязгаарыг</span></span>
+                    <span><span class="lang-en">Beyond</span><span class="lang-mn">давж,</span></span>
+                    <span><span class="lang-en">Limits</span><span class="lang-mn">аял</span></span>
+                </h1>
+                <div class="mn-hero-actions mn-reveal mn-reveal-delay-2">
+                    <a href="#expeditions" class="mn-btn-primary"><span class="lang-en">Explore Expeditions</span><span class="lang-mn">Аяллууд үзэх</span></a>
+                    <a href="#" class="mn-btn-ghost mn-apply-btn"><span class="lang-en">Apply Now &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="mn-hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="mn-hero-scroll-line"/>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         STATS STRIP — animated number counters
+         ==================================================== -->
+    <div class="mn-stats-strip">
+        <div class="mn-stats-inner">
+            <div class="mn-stat-block">
+                <em class="mn-stat-big" data-count="1500000" data-suffix=" km&#178;">&#8212;</em>
+                <p class="mn-stat-label"><span class="lang-en">Untouched terrain</span><span class="lang-mn">Нутгийн газар</span></p>
+            </div>
+            <span class="mn-stat-divider" aria-hidden="true"/>
+            <div class="mn-stat-block">
+                <em class="mn-stat-big" data-count="9">&#8212;</em>
+                <p class="mn-stat-label"><span class="lang-en">Exclusive routes</span><span class="lang-mn">Онцгой маршрут</span></p>
+            </div>
+            <span class="mn-stat-divider" aria-hidden="true"/>
+            <div class="mn-stat-block">
+                <em class="mn-stat-big" data-count="100" data-suffix="%">&#8212;</em>
+                <p class="mn-stat-label"><span class="lang-en">Private expeditions</span><span class="lang-mn">Хувийн аялал</span></p>
+            </div>
+            <span class="mn-stat-divider" aria-hidden="true"/>
+            <div class="mn-stat-block">
+                <em class="mn-stat-big" data-count="7" data-suffix="+">&#8212;</em>
+                <p class="mn-stat-label"><span class="lang-en">Years operating</span><span class="lang-mn">Жил ажилласан</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================
+         EXPEDITIONS — 3x3 grid, 9 routes
+         ==================================================== -->
+    <section id="expeditions" class="mn-expeditions">
+        <div class="mn-container">
+            <div class="mn-section-header mn-reveal">
+                <div>
+                    <p class="mn-label"><span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span></p>
+                    <h2 class="mn-section-title"><span class="lang-en">Choose Your Route</span><span class="lang-mn">Маршрутаа сонгоно уу</span></h2>
+                </div>
+                <p class="mn-section-sub">
+                    <span class="lang-en">All expeditions are fully private,<br/>custom-built around your group.</span>
+                    <span class="lang-mn">Бүх аялал бүрэн хувийн,<br/>таны багт зориулагдсан.</span>
+                </p>
+            </div>
+
+            <div class="mn-cards-grid-3">
+
+                <a href="/expeditions/gobi" class="mn-card">
+                    <img src="/minuru_website/static/src/img/gobi_01.png" alt="Gobi Expedition" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">01</span><span class="mn-card-badge">Most Popular</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Entry Level</p>
+                        <h3 class="mn-card-title">Gobi Expedition</h3>
+                        <p class="mn-card-duration">7&#8211;9 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Sand dunes, canyons, and red rock formations across Mongolia&#8217;s most iconic desert landscape.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/altai" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_02.png" alt="Altai Expedition" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">02</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Advanced</p>
+                        <h3 class="mn-card-title">Altai Expedition</h3>
+                        <p class="mn-card-duration">8&#8211;10 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Glaciers, extreme mountain terrain, and Kazakh culture deep in western Mongolia.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/khuvsgul" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_03.png" alt="Khuvsgul Expedition" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">03</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Relaxed Luxury</p>
+                        <h3 class="mn-card-title">Khuvsgul Expedition</h3>
+                        <p class="mn-card-duration">7&#8211;9 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Ancient forests, crystal lakes, and total silence. Mongolia&#8217;s most serene premium nature experience.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/central" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_04.png" alt="Central Mongolia" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">04</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Culture + Nature</p>
+                        <h3 class="mn-card-title">Central Mongolia</h3>
+                        <p class="mn-card-duration">6&#8211;8 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Nomadic culture, historic sites, and sweeping steppe landscapes at the heart of Mongolia.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/eastern-steppe" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_05.png" alt="Eastern Steppe" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">05</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Off-Grid</p>
+                        <h3 class="mn-card-title">Eastern Steppe</h3>
+                        <p class="mn-card-duration">7&#8211;9 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Limitless grasslands, zero infrastructure, and the most profound silence on earth.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/gobi-altai" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_06.png" alt="Gobi-Altai" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">06</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Long Expedition</p>
+                        <h3 class="mn-card-title">Gobi&#8211;Altai</h3>
+                        <p class="mn-card-duration">9&#8211;10 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">From desert dunes to mountain glaciers &#8212; the ultimate variety across two of Mongolia&#8217;s greatest landscapes.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/western" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_07.png" alt="Western Mongolia" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">07</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Remote Adventure</p>
+                        <h3 class="mn-card-title">Western Mongolia</h3>
+                        <p class="mn-card-duration">9&#8211;10 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">The wildest, most remote region. Kazakh eagle hunters, high passes, untouched wilderness.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/northern" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_08.png" alt="Northern Mongolia" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">08</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Nature Escape</p>
+                        <h3 class="mn-card-title">Northern Mongolia</h3>
+                        <p class="mn-card-duration">7&#8211;9 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Dense taiga forests, pristine rivers, and a cool northern climate unlike anywhere else in Mongolia.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/expeditions/steppe-lake" class="mn-card">
+                    <img src="/minuru_website/static/src/img/mongolia_image_09.png" alt="Steppe and Lake" class="mn-card-img"/>
+                    <div class="mn-card-overlay"/>
+                    <div class="mn-card-top"><span class="mn-card-num">09</span></div>
+                    <div class="mn-card-body">
+                        <p class="mn-card-type">Relaxed</p>
+                        <h3 class="mn-card-title">Steppe &amp; Lake</h3>
+                        <p class="mn-card-duration">7&#8211;9 days</p>
+                        <div class="mn-card-reveal">
+                            <p class="mn-card-desc-text">Rolling grasslands meet mirror-still lakes. Open space and water tranquillity in perfect combination.</p>
+                            <p class="mn-card-price">&#8364;10,000 / 10 days / team of 2&#8211;3</p>
+                            <span class="mn-card-cta">View expedition</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="mn-expeditions-footer mn-reveal">
+                <p class="mn-expeditions-footer-text">&#8220;Whichever route you choose &#8212; this is not a tour. This is a living expedition.&#8221;</p>
+                <button class="mn-btn-outline mn-apply-btn"><span class="lang-en">Apply for Expedition &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         EXPERIENCE — "How Do You Want to Feel?"
+         Light cream background · 4 feeling cards + quote
+         ==================================================== -->
+    <section id="experience" class="mn-experience">
+        <div class="mn-container">
+            <div class="mn-experience-header mn-reveal">
+                <p class="mn-label"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></p>
+                <h2 class="mn-experience-title">
+                    <span class="lang-en">How Do You<br/>Want to Feel?</span>
+                    <span class="lang-mn">Та ямар<br/>мэдрэмж авах вэ?</span>
+                </h2>
+                <p class="mn-experience-sub">
+                    <span class="lang-en">It&#8217;s not where you go. It&#8217;s what you carry back.</span>
+                    <span class="lang-mn">Хаана явахаас биш, юу авч буцахыг боддог.</span>
+                </p>
+            </div>
+
+            <div class="mn-feels-grid mn-reveal mn-reveal-delay-1">
+                <div class="mn-feel">
+                    <div class="mn-feel-num">01</div>
+                    <h3 class="mn-feel-title"><span class="lang-en">Freedom</span><span class="lang-mn">Эрх чөлөө</span></h3>
+                    <p class="mn-feel-desc">Drive without a road, sleep under a sky full of stars, stop wherever the land tells you to. No itinerary. No schedule. Just you and the horizon.</p>
+                </div>
+                <div class="mn-feel">
+                    <div class="mn-feel-num">02</div>
+                    <h3 class="mn-feel-title"><span class="lang-en">Solitude</span><span class="lang-mn">Ганцаардал</span></h3>
+                    <p class="mn-feel-desc">Days can pass without seeing another human being. The rare, almost forgotten sensation of being truly alone with the world.</p>
+                </div>
+                <div class="mn-feel">
+                    <div class="mn-feel-num">03</div>
+                    <h3 class="mn-feel-title"><span class="lang-en">Adventure</span><span class="lang-mn">Адал явдал</span></h3>
+                    <p class="mn-feel-desc">River crossings, 45&#176; climbs, sand and mud and mountain snow. Every day is a problem worth solving, a terrain worth conquering.</p>
+                </div>
+                <div class="mn-feel">
+                    <div class="mn-feel-num">04</div>
+                    <h3 class="mn-feel-title"><span class="lang-en">Awe</span><span class="lang-mn">Гайхшрал</span></h3>
+                    <p class="mn-feel-desc">Standing at the edge of the Gobi dunes at golden hour. The Altai at dawn. Khuvsgul in perfect stillness. Some things cannot be described.</p>
+                </div>
+            </div>
+
+            <blockquote class="mn-experience-quote mn-reveal mn-reveal-delay-2">
+                <p>&#8220;This is not a tour. This is a living, breathing expedition &#8212; built for those who want the real thing.&#8221;</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         ROUTES — static map image + 5 regions
+         ==================================================== -->
+    <section id="routes" class="mn-routes">
+        <div class="mn-container mn-reveal">
+            <div class="mn-section-header">
+                <div>
+                    <p class="mn-label"><span class="lang-en">Routes</span><span class="lang-mn">Маршрутууд</span></p>
+                    <h2 class="mn-section-title"><span class="lang-en">Mongolia&#8217;s Terrain</span><span class="lang-mn">Монголын Нутаг</span></h2>
+                </div>
+                <p class="mn-section-sub">
+                    <span class="lang-en">Point-to-point routes &#8212;<br/>you never travel the same road twice.</span>
+                    <span class="lang-mn">Цэгээс цэг рүү &#8212;<br/>ижил замыг давтдаггүй.</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mn-routes-map">
+            <img src="/minuru_website/static/src/img/mongolia_image_10.png"
+                 alt="Mongolia terrain overview" class="mn-routes-map-img"/>
+            <div class="mn-routes-map-overlay"/>
+            <div class="mn-route-pin mn-route-pin-ub"><span class="mn-pin-dot"/><span class="mn-pin-label">Ulaanbaatar</span></div>
+            <div class="mn-route-pin mn-route-pin-gobi"><span class="mn-pin-dot"/><span class="mn-pin-label">Gobi</span></div>
+            <div class="mn-route-pin mn-route-pin-altai"><span class="mn-pin-dot"/><span class="mn-pin-label">Altai</span></div>
+            <div class="mn-route-pin mn-route-pin-khuvsgul"><span class="mn-pin-dot"/><span class="mn-pin-label">Khuvsgul</span></div>
+            <div class="mn-route-pin mn-route-pin-east"><span class="mn-pin-dot"/><span class="mn-pin-label">Eastern Steppe</span></div>
+        </div>
+
+        <div class="mn-container">
+            <div class="mn-routes-regions mn-reveal">
+                <div class="mn-route-region">
+                    <p class="mn-route-region-dir"><span class="lang-en">South</span><span class="lang-mn">Өмнөд</span></p>
+                    <p class="mn-route-region-name">Gobi Desert</p>
+                    <p class="mn-route-region-desc">Dunes &#183; Canyons &#183; Red rock</p>
+                </div>
+                <div class="mn-route-region">
+                    <p class="mn-route-region-dir"><span class="lang-en">West</span><span class="lang-mn">Баруун</span></p>
+                    <p class="mn-route-region-name">Altai Mountains</p>
+                    <p class="mn-route-region-desc">Glaciers &#183; High passes</p>
+                </div>
+                <div class="mn-route-region">
+                    <p class="mn-route-region-dir"><span class="lang-en">North</span><span class="lang-mn">Хойд</span></p>
+                    <p class="mn-route-region-name">Khuvsgul &amp; Taiga</p>
+                    <p class="mn-route-region-desc">Forests &#183; Crystal lakes</p>
+                </div>
+                <div class="mn-route-region">
+                    <p class="mn-route-region-dir"><span class="lang-en">East</span><span class="lang-mn">Зүүн</span></p>
+                    <p class="mn-route-region-name">Eastern Steppe</p>
+                    <p class="mn-route-region-desc">Endless grasslands</p>
+                </div>
+                <div class="mn-route-region">
+                    <p class="mn-route-region-dir"><span class="lang-en">Centre</span><span class="lang-mn">Төв</span></p>
+                    <p class="mn-route-region-name">Heartland</p>
+                    <p class="mn-route-region-desc">Culture &#183; History</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         FLEET — 70vh image + 8-spec grid
+         ==================================================== -->
+    <section id="fleet" class="mn-fleet">
+        <div class="mn-container mn-fleet-layout mn-reveal">
+            <div class="mn-fleet-content">
+                <p class="mn-label"><span class="lang-en">The Fleet</span><span class="lang-mn">Машинууд</span></p>
+                <h2 class="mn-fleet-title">
+                    <span class="lang-en">Your Mobile<br/>Base Camp</span>
+                    <span class="lang-mn">Таны Хөдөлгөөнт<br/>Суурь Бааз</span>
+                </h2>
+                <h3 class="mn-fleet-intro-title">
+                    <span class="lang-en">Not a car. Not a camper.<br/>Your home for the expedition.</span>
+                    <span class="lang-mn">Машин биш. Кемпер биш.<br/>Аяллын таны гэр.</span>
+                </h3>
+                <p class="mn-fleet-desc">A fully autonomous, all-terrain vehicle built for Mongolia&#8217;s most extreme conditions. From the Gobi at 40&#176;C to the Altai at &#8722;30&#176;C &#8212; it handles everything.</p>
+
+                <div class="mn-specs-grid">
+                    <div class="mn-spec"><p class="mn-spec-label">Engine</p><p class="mn-spec-value">6-cylinder, 310hp</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Torque</p><p class="mn-spec-value">1,280 Nm</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Climb Angle</p><p class="mn-spec-value">Up to 45&#176;</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Battery</p><p class="mn-spec-value">48V lithium &#8776;15kWh</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Water</p><p class="mn-spec-value">300L fresh / 120L grey</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Temperature</p><p class="mn-spec-value">Rated to &#8722;30&#176;C</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Sleeping</p><p class="mn-spec-value">2&#8211;3 persons</p></div>
+                    <div class="mn-spec"><p class="mn-spec-label">Winch</p><p class="mn-spec-value">20,000 lbs</p></div>
+                </div>
+            </div>
+
+            <div class="mn-fleet-slider" data-fleet-slider="true" aria-label="Fleet photos">
+                <div class="mn-fleet-slides">
+                    <figure class="mn-fleet-slide active">
+                        <img src="/minuru_website/static/src/img/gobi_01.png" alt="Expedition vehicle in the Gobi"/>
+                    </figure>
+                    <figure class="mn-fleet-slide">
+                        <img src="/minuru_website/static/src/img/mongolia_image_10.png" alt="Vehicle crossing remote Mongolian terrain"/>
+                    </figure>
+                    <figure class="mn-fleet-slide">
+                        <img src="/minuru_website/static/src/img/mongolia_image_11.png" alt="Mobile base camp in open landscape"/>
+                    </figure>
+                </div>
+                <div class="mn-fleet-slider-ui">
+                    <button type="button" class="mn-fleet-arrow" data-fleet-prev="true" aria-label="Previous fleet photo">&#8592;</button>
+                    <div class="mn-fleet-dots" aria-hidden="true">
+                        <button type="button" class="mn-fleet-dot active" data-fleet-dot="0"/>
+                        <button type="button" class="mn-fleet-dot" data-fleet-dot="1"/>
+                        <button type="button" class="mn-fleet-dot" data-fleet-dot="2"/>
+                    </div>
+                    <button type="button" class="mn-fleet-arrow" data-fleet-next="true" aria-label="Next fleet photo">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         GALLERY — masonry 6-image grid
+         ==================================================== -->
+    <section id="gallery" class="mn-gallery">
+        <div class="mn-container mn-reveal">
+            <div class="mn-section-header">
+                <div>
+                    <p class="mn-label"><span class="lang-en">Gallery</span><span class="lang-mn">Галерей</span></p>
+                    <h2 class="mn-section-title"><span class="lang-en">Mongolia, Unfiltered</span><span class="lang-mn">Монгол, Бодитоор</span></h2>
+                </div>
+                <p class="mn-section-sub"><span class="lang-en">Every image is a real moment<br/>from a real expedition.</span><span class="lang-mn">Зураг бүр жинхэнэ<br/>аяллын агшин.</span></p>
+            </div>
+        </div>
+
+        <div class="mn-gallery-showcase mn-reveal mn-reveal-delay-1" data-gallery-showcase="true">
+            <div class="mn-gallery-main-frame">
+                <div class="mn-gallery-main-images">
+                    <figure class="mn-gallery-main active">
+                        <img src="/minuru_website/static/src/img/hero.png" alt="Mongolia Wilderness"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_02.png" alt="Gobi Desert"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_03.png" alt="Altai Mountains"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_04.png" alt="Khuvsgul Lake"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_05.png" alt="Eastern Steppe"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_06.png" alt="Northern Mongolia"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_07.png" alt="Western Mongolia"/>
+                    </figure>
+                    <figure class="mn-gallery-main">
+                        <img src="/minuru_website/static/src/img/mongolia_image_08.png" alt="Steppe and Lake"/>
+                    </figure>
+                </div>
+                <div class="mn-gallery-caption">
+                    <span class="mn-gallery-count" data-gallery-count="true">01 / 08</span>
+                    <div>
+                        <h3 class="mn-gallery-caption-title" data-gallery-title="true">Mongolia Wilderness</h3>
+                        <p class="mn-gallery-caption-text" data-gallery-text="true">Wide-open terrain, real expedition silence, and the scale that defines the journey.</p>
+                    </div>
+                    <div class="mn-gallery-controls" aria-label="Gallery controls">
+                        <button type="button" class="mn-gallery-arrow" data-gallery-prev="true" aria-label="Previous gallery photo">&#8592;</button>
+                        <button type="button" class="mn-gallery-arrow" data-gallery-next="true" aria-label="Next gallery photo">&#8594;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mn-gallery-strip-wrap">
+                <div class="mn-gallery-strip-label">
+                    <span>Selected Frames</span>
+                    <span>Scroll</span>
+                </div>
+                <div class="mn-gallery-thumbs" aria-label="Gallery photos">
+                <button type="button" class="mn-gallery-thumb active" data-gallery-index="0" data-gallery-title="Mongolia Wilderness" data-gallery-text="Wide-open terrain, real expedition silence, and the scale that defines the journey.">
+                    <span class="mn-gallery-thumb-num">01</span>
+                    <img src="/minuru_website/static/src/img/hero.png" alt="Mongolia Wilderness thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="1" data-gallery-title="Gobi Desert" data-gallery-text="Desert light, red earth, and routes shaped around the land rather than the road.">
+                    <span class="mn-gallery-thumb-num">02</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_02.png" alt="Gobi Desert thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="2" data-gallery-title="Altai Mountains" data-gallery-text="Remote passes, cold air, and a sharper edge of Mongolia's western wilderness.">
+                    <span class="mn-gallery-thumb-num">03</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_03.png" alt="Altai Mountains thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="3" data-gallery-title="Khuvsgul Lake" data-gallery-text="Clear water, forested horizons, and a quieter rhythm between expedition days.">
+                    <span class="mn-gallery-thumb-num">04</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_04.png" alt="Khuvsgul Lake thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="4" data-gallery-title="Eastern Steppe" data-gallery-text="Flat horizons, soft light, and the kind of distance that makes time feel wider.">
+                    <span class="mn-gallery-thumb-num">05</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_05.png" alt="Eastern Steppe thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="5" data-gallery-title="Northern Mongolia" data-gallery-text="Forest roads, rivers, and colder air on the route toward Mongolia's green north.">
+                    <span class="mn-gallery-thumb-num">06</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_06.png" alt="Northern Mongolia thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="6" data-gallery-title="Western Mongolia" data-gallery-text="Rougher tracks, high country, and the raw edge of remote travel.">
+                    <span class="mn-gallery-thumb-num">07</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_07.png" alt="Western Mongolia thumbnail"/>
+                </button>
+                <button type="button" class="mn-gallery-thumb" data-gallery-index="7" data-gallery-title="Steppe and Lake" data-gallery-text="Open grassland meeting water, built for slow mornings and long views.">
+                    <span class="mn-gallery-thumb-num">08</span>
+                    <img src="/minuru_website/static/src/img/mongolia_image_08.png" alt="Steppe and Lake thumbnail"/>
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         TESTIMONIALS — 3 quotes · light cream bg
+         ==================================================== -->
+    <section class="mn-testimonials">
+        <div class="mn-container mn-reveal">
+            <p class="mn-label"><span class="lang-en">What Travellers Say</span><span class="lang-mn">Аялагчдын санал</span></p>
+            <div class="mn-testimonials-grid">
+                <blockquote class="mn-testimonial">
+                    <p class="mn-testimonial-quote">&#8220;A once-in-a-lifetime experience. Mongolia is unlike anything else, and Minuru made it feel effortless and utterly real.&#8221;</p>
+                    <footer class="mn-testimonial-footer">
+                        <p class="mn-testimonial-name">James K.</p>
+                        <p class="mn-testimonial-detail">United Kingdom &#183; Gobi Expedition</p>
+                    </footer>
+                </blockquote>
+                <blockquote class="mn-testimonial">
+                    <p class="mn-testimonial-quote">&#8220;We drove across the Gobi with zero tourist infrastructure &#8212; pure freedom. The kind of trip that changes your perspective on everything.&#8221;</p>
+                    <footer class="mn-testimonial-footer">
+                        <p class="mn-testimonial-name">Sarah M.</p>
+                        <p class="mn-testimonial-detail">United States &#183; Altai Expedition</p>
+                    </footer>
+                </blockquote>
+                <blockquote class="mn-testimonial">
+                    <p class="mn-testimonial-quote">&#8220;The attention to detail, the safety, the sheer scale of it. We&#8217;re already planning our return. There&#8217;s simply nothing else like it.&#8221;</p>
+                    <footer class="mn-testimonial-footer">
+                        <p class="mn-testimonial-name">Thomas R.</p>
+                        <p class="mn-testimonial-detail">Germany &#183; Khuvsgul Expedition</p>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         ABOUT — 2-col: text + stats + image
+         ==================================================== -->
+    <section id="about" class="mn-about">
+        <div class="mn-container">
+            <div class="mn-about-grid mn-reveal">
+                <div class="mn-about-text">
+                    <p class="mn-label"><span class="lang-en">About</span><span class="lang-mn">Бидний тухай</span></p>
+                    <h2 class="mn-about-title">
+                        <span class="lang-en">We Don&#8217;t Follow<br/>Roads. We Make Them.</span>
+                        <span class="lang-mn">Бид зам дагадаггүй.<br/>Бид шинэ зам нээдэг.</span>
+                    </h2>
+                    <div class="mn-about-body">
+                        <p>Minuru Motors was founded with a single conviction: Mongolia deserves to be experienced &#8212; not toured. Not managed, not packaged. Experienced, in the fullest sense of the word.</p>
+                        <p>Our expeditions are built around capable vehicles, experienced guides, and the world&#8217;s last truly open frontier. We take small, private groups into terrain that most people will never see.</p>
+                        <p>This is not adventure tourism. This is expedition travel, designed for those who understand the difference.</p>
+                    </div>
+                    <div class="mn-about-mission">
+                        <p class="mn-about-mission-label"><span class="lang-en">Our Mission</span><span class="lang-mn">Бидний зорилго</span></p>
+                        <p class="mn-about-mission-text">To set the global standard for premium expedition travel in Mongolia &#8212; combining freedom, safety, and authentic wilderness at the highest level.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="mn-about-stats">
+                        <div class="mn-about-stat"><p class="mn-about-stat-val">1.5M</p><p class="mn-about-stat-lbl">sq km of terrain</p></div>
+                        <div class="mn-about-stat"><p class="mn-about-stat-val">9</p><p class="mn-about-stat-lbl">exclusive routes</p></div>
+                        <div class="mn-about-stat"><p class="mn-about-stat-val">100%</p><p class="mn-about-stat-lbl">private expeditions</p></div>
+                        <div class="mn-about-stat"><p class="mn-about-stat-val">7+</p><p class="mn-about-stat-lbl">years in Mongolia</p></div>
+                        <div class="mn-about-img-wrap">
+                            <img src="/minuru_website/static/src/img/mongolia_image_11.png"
+                                 alt="Mongolia wilderness" class="mn-about-img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         CONTACT — form + direct contact info
+         ==================================================== -->
+    <section id="contact" class="mn-contact mn-reveal">
+        <div class="mn-container">
+            <div class="mn-contact-header">
+                <p class="mn-label"><span class="lang-en">Contact</span><span class="lang-mn">Холбоо барих</span></p>
+                <h2 class="mn-contact-title"><span class="lang-en">Ready to Begin?</span><span class="lang-mn">Бэлэн үү?</span></h2>
+                <p class="mn-contact-sub">Our team responds within 24&#8211;48 hours. All expeditions are fully private and custom-built.</p>
+            </div>
+
+            <div class="mn-contact-grid">
+                <form class="mn-form" action="/contactus" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="mn-form-row">
+                        <div class="mn-form-field"><label>Full Name</label><input type="text" name="contact_name" placeholder="Your name"/></div>
+                        <div class="mn-form-field"><label>Country</label><input type="text" name="partner_country" placeholder="Your country"/></div>
+                    </div>
+                    <div class="mn-form-field"><label>Email</label><input type="email" name="email_from" placeholder="your@email.com"/></div>
+                    <div class="mn-form-field">
+                        <label>Expedition of Interest</label>
+                        <select name="subject">
+                            <option value="">Select expedition</option>
+                            <option value="Gobi Expedition">Gobi Expedition</option>
+                            <option value="Altai Expedition">Altai Expedition</option>
+                            <option value="Khuvsgul Expedition">Khuvsgul Expedition</option>
+                            <option value="Central Mongolia">Central Mongolia</option>
+                            <option value="Eastern Steppe">Eastern Steppe</option>
+                            <option value="Gobi-Altai">Gobi&#8211;Altai Expedition</option>
+                            <option value="Western Mongolia">Western Mongolia</option>
+                            <option value="Northern Mongolia">Northern Mongolia</option>
+                            <option value="Steppe and Lake">Steppe &amp; Lake</option>
+                        </select>
+                    </div>
+                    <div class="mn-form-row">
+                        <div class="mn-form-field"><label>WhatsApp / WeChat</label><input type="text" name="phone" placeholder="+1 000 000 0000"/></div>
+                        <div class="mn-form-field">
+                            <label>Group Size</label>
+                            <select name="company_name">
+                                <option value="">Select size</option>
+                                <option value="1 person">1 person</option>
+                                <option value="2 people">2 people</option>
+                                <option value="3 people">3 people</option>
+                                <option value="4 people">4 people</option>
+                                <option value="5+ people">5+ people</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mn-form-field"><label>Message</label><textarea name="description" rows="4" placeholder="Tell us about your group, preferred dates, and any questions&#8230;"/></div>
+                    <button type="submit" class="mn-btn-submit"><span class="lang-en">Send Enquiry &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></button>
+                </form>
+
+                <div class="mn-contact-info">
+                    <p class="mn-contact-info-label">Or reach us directly</p>
+                    <div class="mn-contact-item"><p class="mn-contact-platform">WhatsApp</p><p class="mn-contact-value">+976 9911 2233</p></div>
+                    <div class="mn-contact-item"><p class="mn-contact-platform">WeChat</p><p class="mn-contact-value">Minuru_Expedition</p></div>
+                    <div class="mn-contact-item"><p class="mn-contact-platform">TikTok</p><p class="mn-contact-value">@minuru.motors</p></div>
+                    <div class="mn-contact-item"><p class="mn-contact-platform">Email</p><p class="mn-contact-value">info@minururental.com</p></div>
+                    <p class="mn-contact-note">All expeditions are fully private and custom-built. We work with teams of 2&#8211;4 people. Group enquiries welcome.</p>
+                    <div class="mn-contact-location"><p class="mn-contact-platform">Location</p><p class="mn-contact-value">Ulaanbaatar, Mongolia</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         CTA BAND — high-impact full-width call to action
+         ==================================================== -->
+    <section class="mn-cta-band">
+        <div class="mn-cta-band-inner">
+            <div class="mn-cta-band-text">
+                <p class="mn-cta-band-sup"><span class="lang-en">Ready to go?</span><span class="lang-mn">Бэлэн үү?</span></p>
+                <h2 class="mn-cta-band-title">
+                    <span class="lang-en">Your Expedition<br/>Starts Here</span>
+                    <span class="lang-mn">Таны аялал<br/>эндээс эхэлнэ</span>
+                </h2>
+            </div>
+            <a href="#" class="mn-btn-cta-band mn-apply-btn">
+                <span class="lang-en">Apply for Your Expedition</span>
+                <span class="lang-mn">Хүсэлт илгээх</span>
+                <svg viewBox="0 0 26 12" width="26" height="12" aria-hidden="true" fill="none">
+                    <path d="M0 6h24M18 1l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <t t-call="minuru_website.apply_modal"/>
+    <t t-call="minuru_website.shared_footer"/>
+
+</div><!-- /mn-wrap -->
+</xpath>
+</template>
+
+
+<!-- =========================================================
+     EXPEDITION DETAIL PAGE — shared layout template
+     Used by all 9 route pages via t-call / controller
+     ========================================================= -->
+<template id="expedition_detail" name="Expedition Detail">
+<t t-call="website.layout">
+<div id="wrap" class="mn-wrap mn-exp-wrap">
+
+    <t t-call="minuru_website.shared_navbar"/>
+
+    <!-- HERO — full-bleed photo, title injected by controller -->
+    <section class="mn-exp-hero">
+        <div class="mn-exp-hero-bg" t-attf-style="background-image:url('#{exp_hero_img}')"/>
+        <div class="mn-exp-hero-overlay"/>
+        <div class="mn-exp-hero-content">
+            <div class="mn-container">
+                <a href="/#expeditions" class="mn-exp-back">&#8592; <span class="lang-en">All Expeditions</span><span class="lang-mn">Бүх аяллууд</span></a>
+                <p class="mn-exp-type"><span class="lang-en"><t t-esc="exp_type_en"/></span><span class="lang-mn"><t t-esc="exp_type_mn"/></span></p>
+                <h1 class="mn-exp-h1"><span class="lang-en"><t t-esc="exp_title_en"/></span><span class="lang-mn"><t t-esc="exp_title_mn"/></span></h1>
+                <div class="mn-exp-meta">
+                    <span class="mn-exp-meta-item"><span class="mn-exp-meta-lbl"><span class="lang-en">Duration</span><span class="lang-mn">Хугацаа</span></span><span class="mn-exp-meta-val"><span class="lang-en"><t t-esc="exp_duration_en"/></span><span class="lang-mn"><t t-esc="exp_duration_mn"/></span></span></span>
+                    <span class="mn-exp-meta-sep"/>
+                    <span class="mn-exp-meta-item"><span class="mn-exp-meta-lbl"><span class="lang-en">Level</span><span class="lang-mn">Төрөл</span></span><span class="mn-exp-meta-val"><span class="lang-en"><t t-esc="exp_level_en"/></span><span class="lang-mn"><t t-esc="exp_level_mn"/></span></span></span>
+                    <span class="mn-exp-meta-sep"/>
+                    <span class="mn-exp-meta-item"><span class="mn-exp-meta-lbl"><span class="lang-en">Price</span><span class="lang-mn">Үнэ</span></span><span class="mn-exp-meta-val">&#8364;10,000 / team</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW — intro text + 3-image grid -->
+    <section class="mn-exp-overview">
+        <div class="mn-container">
+            <div class="mn-exp-overview-grid mn-reveal">
+                <div class="mn-exp-overview-text">
+                    <p class="mn-label"><span class="lang-en">Overview</span><span class="lang-mn">Танилцуулга</span></p>
+                    <h2 class="mn-exp-overview-title"><span class="lang-en"><t t-esc="exp_tagline_en"/></span><span class="lang-mn"><t t-esc="exp_tagline_mn"/></span></h2>
+                    <div class="mn-exp-overview-body">
+                        <span class="lang-en"><t t-esc="exp_description_en"/></span>
+                        <span class="lang-mn"><t t-esc="exp_description_mn"/></span>
+                    </div>
+                    <div class="mn-exp-highlights">
+                        <p class="mn-label" style="margin-top:2.5rem;"><span class="lang-en">Highlights</span><span class="lang-mn">Онцлог</span></p>
+                        <ul class="mn-exp-highlight-list lang-en">
+                            <t t-foreach="exp_highlights_en" t-as="h">
+                                <li><t t-esc="h"/></li>
+                            </t>
+                        </ul>
+                        <ul class="mn-exp-highlight-list lang-mn">
+                            <t t-foreach="exp_highlights_mn" t-as="h">
+                                <li><t t-esc="h"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                    <button class="mn-btn-primary mn-apply-btn" style="margin-top:2.5rem;"><span class="lang-en">Apply for This Expedition &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></button>
+                </div>
+                <div class="mn-exp-images">
+                    <div class="mn-exp-img-grid">
+                        <div class="mn-exp-img mn-exp-img-large">
+                            <img t-att-src="exp_img_1" t-att-alt="exp_title_en"/>
+                        </div>
+                        <div class="mn-exp-img">
+                            <img t-att-src="exp_img_2" t-att-alt="exp_title_en"/>
+                        </div>
+                        <div class="mn-exp-img">
+                            <img t-att-src="exp_img_3" t-att-alt="exp_title_en"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRACTICAL INFO — price, dates, what to bring -->
+    <section class="mn-exp-practical">
+        <div class="mn-container">
+            <div class="mn-exp-practical-grid mn-reveal">
+                <div class="mn-exp-practical-block">
+                    <p class="mn-label"><span class="lang-en">Price &amp; Payment</span><span class="lang-mn">Үнэ &amp; Төлбөр</span></p>
+                    <p class="mn-exp-price-big">&#8364;10,000</p>
+                    <p class="mn-exp-price-detail"><span class="lang-en">Per team of 2&#8211;3 people &#183; 10 days<br/>100% upfront &#183; 100% deposit returned after expedition</span><span class="lang-mn">2&#8211;3 хүний баг &#183; 10 хоног<br/>100% урьдчилгаа &#183; 100% барьцаа буцаана</span></p>
+                </div>
+                <div class="mn-exp-practical-block">
+                    <p class="mn-label"><span class="lang-en">Season</span><span class="lang-mn">Улирал</span></p>
+                    <p class="mn-exp-season">May &#8212; October</p>
+                    <p class="mn-exp-season-note"><span class="lang-en">Some routes only accessible in specific months. Contact us for availability.</span><span class="lang-mn">Зарим маршрут тодорхой саруудад л нэвтрэх боломжтой.</span></p>
+                </div>
+                <div class="mn-exp-practical-block">
+                    <p class="mn-label"><span class="lang-en">Included</span><span class="lang-mn">Багтсан зүйл</span></p>
+                    <ul class="mn-exp-included-list">
+                        <li><span class="lang-en">Expedition vehicle (fully equipped)</span><span class="lang-mn">Expedition машин (бүрэн тоноглогдсон)</span></li>
+                        <li><span class="lang-en">Experienced guide &amp; support</span><span class="lang-mn">Туршлагатай хөтөч &amp; дэмжлэг</span></li>
+                        <li><span class="lang-en">Helicopter rescue insurance</span><span class="lang-mn">Нислэгийн даатгал</span></li>
+                        <li><span class="lang-en">Satellite communication</span><span class="lang-mn">Сансрын холбоо</span></li>
+                        <li><span class="lang-en">All fuel &amp; permits</span><span class="lang-mn">Шатахуун &amp; зөвшөөрлүүд</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="mn-cta-band">
+        <div class="mn-cta-band-inner">
+            <div class="mn-cta-band-text">
+                <p class="mn-cta-band-sup"><span class="lang-en">Ready?</span><span class="lang-mn">Бэлэн үү?</span></p>
+                <h2 class="mn-cta-band-title">
+                    <span class="lang-en">Apply for<br/><t t-esc="exp_title_en"/></span>
+                    <span class="lang-mn">Хүсэлт<br/>илгээх</span>
+                </h2>
+            </div>
+            <a href="#" class="mn-btn-cta-band mn-apply-btn">
+                <span class="lang-en">Apply Now</span>
+                <span class="lang-mn">Хүсэлт илгээх</span>
+                <svg viewBox="0 0 26 12" width="26" height="12" aria-hidden="true" fill="none">
+                    <path d="M0 6h24M18 1l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Apply Modal (same as homepage) -->
+    <t t-call="minuru_website.apply_modal"/>
+
+    <!-- Footer -->
+    <t t-call="minuru_website.shared_footer"/>
+
+</div>
+</t>
+</template>
+
+<!-- =========================================================
+     SHARED: Navbar + Mobile Menu
+     ========================================================= -->
+<template id="shared_navbar" name="Shared Navbar">
+    <nav id="mn-navbar" class="mn-navbar">
+        <div class="mn-nav-inner">
+            <a href="/" class="mn-nav-logo">MINURU</a>
+            <ul class="mn-nav-links">
+                <li class="mn-has-mega">
+                    <a href="/#expeditions" class="mn-nav-link">
+                        <span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span>
+                        <svg class="mn-nav-chevron" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <div class="mn-mega">
+                        <div class="mn-mega-inner">
+                            <div class="mn-mega-links">
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">01</span><div><p class="mn-mega-name">Gobi Expedition</p><p class="mn-mega-tag">7&#8211;9 days &#183; Entry Level</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">02</span><div><p class="mn-mega-name">Altai Expedition</p><p class="mn-mega-tag">8&#8211;10 days &#183; Advanced</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">03</span><div><p class="mn-mega-name">Khuvsgul Expedition</p><p class="mn-mega-tag">7&#8211;9 days &#183; Relaxed</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">04</span><div><p class="mn-mega-name">Central Mongolia</p><p class="mn-mega-tag">6&#8211;8 days &#183; Culture</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">05</span><div><p class="mn-mega-name">Eastern Steppe</p><p class="mn-mega-tag">7&#8211;9 days &#183; Off-Grid</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">06</span><div><p class="mn-mega-name">Gobi&#8211;Altai</p><p class="mn-mega-tag">9&#8211;10 days &#183; Long Route</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">07</span><div><p class="mn-mega-name">Western Mongolia</p><p class="mn-mega-tag">9&#8211;10 days &#183; Remote</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">08</span><div><p class="mn-mega-name">Northern Mongolia</p><p class="mn-mega-tag">7&#8211;9 days &#183; Forest</p></div></a>
+                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">09</span><div><p class="mn-mega-name">Steppe &amp; Lake</p><p class="mn-mega-tag">7&#8211;9 days &#183; Relaxed</p></div></a>
+                            </div>
+                            <div class="mn-mega-feature">
+                                <img src="/minuru_website/static/src/img/gobi_01.png" alt="Gobi Expedition" class="mn-mega-feat-img"
+                                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600'"/>
+                                <div class="mn-mega-feat-text">
+                                    <p class="mn-mega-feat-label">Most Popular</p>
+                                    <p class="mn-mega-feat-title">Gobi Expedition</p>
+                                    <a href="/#contact" class="mn-mega-feat-link">Apply Now &#8594;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/#experience" class="mn-nav-link"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></a></li>
+                <li><a href="/#routes"     class="mn-nav-link"><span class="lang-en">Routes</span><span class="lang-mn">Маршрут</span></a></li>
+                <li><a href="/#fleet"      class="mn-nav-link"><span class="lang-en">Fleet</span><span class="lang-mn">Машинууд</span></a></li>
+                <li><a href="/#gallery"    class="mn-nav-link"><span class="lang-en">Gallery</span><span class="lang-mn">Галерей</span></a></li>
+                <li><a href="/#about"      class="mn-nav-link"><span class="lang-en">About</span><span class="lang-mn">Бидний тухай</span></a></li>
+            </ul>
+            <div class="mn-lang-toggle">
+                <button class="mn-lang-btn active" data-lang="en">EN</button>
+                <span class="mn-lang-sep">/</span>
+                <button class="mn-lang-btn" data-lang="mn">MN</button>
+            </div>
+            <a href="#" class="mn-nav-cta mn-apply-btn"><span class="lang-en">Apply Now</span><span class="lang-mn">Хүсэлт илгээх</span></a>
+            <button class="mn-hamburger" id="mn-hamburger" aria-label="Menu"><span/><span/><span/></button>
+        </div>
+    </nav>
+    <div id="mn-mobile-menu" class="mn-mobile-menu">
+        <div class="mn-mobile-header">
+            <span class="mn-mobile-logo">MINURU</span>
+            <button id="mn-mobile-close" class="mn-mobile-close" aria-label="Close">&#10005;</button>
+        </div>
+        <a href="/#expeditions" class="mn-mobile-link"><span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span></a>
+        <a href="/#experience"  class="mn-mobile-link"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></a>
+        <a href="/#routes"      class="mn-mobile-link"><span class="lang-en">Routes</span><span class="lang-mn">Маршрут</span></a>
+        <a href="/#fleet"       class="mn-mobile-link"><span class="lang-en">Fleet</span><span class="lang-mn">Машинууд</span></a>
+        <a href="/#gallery"     class="mn-mobile-link"><span class="lang-en">Gallery</span><span class="lang-mn">Галерей</span></a>
+        <a href="/#about"       class="mn-mobile-link"><span class="lang-en">About</span><span class="lang-mn">Бидний тухай</span></a>
+        <a href="#" class="mn-mobile-cta mn-apply-btn"><span class="lang-en">Apply Now &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></a>
+    </div>
+</template>
+
+<!-- =========================================================
+     SHARED: Apply Modal partial
+     ========================================================= -->
+<template id="apply_modal" name="Apply Modal">
+    <div id="mn-modal-backdrop" class="mn-modal-backdrop" role="dialog" aria-modal="true">
+        <div class="mn-modal" id="mn-modal">
+            <div class="mn-modal-header">
+                <div>
+                    <h2 class="mn-modal-title"><span class="lang-en">Apply for Expedition</span><span class="lang-mn">Аяллд оролцох хүсэлт</span></h2>
+                    <p class="mn-modal-sub"><span class="lang-en">Fill in the details below. Our team responds within 24&#8211;48 hours.</span><span class="lang-mn">Мэдээллийг бөглөснөөр 24&#8211;48 цагийн дотор холбогдоно.</span></p>
+                </div>
+                <button class="mn-modal-close" id="mn-modal-close" aria-label="Close">&#10005;</button>
+            </div>
+            <div class="mn-modal-steps" id="mn-modal-steps" aria-hidden="true">
+                <span class="mn-modal-step-dot active" data-step="1"/>
+                <span class="mn-modal-step-dot" data-step="2"/>
+                <span class="mn-modal-step-dot" data-step="3"/>
+                <span class="mn-modal-step-dot" data-step="4"/>
+            </div>
+            <div class="mn-modal-success" id="mn-modal-success">
+                <div class="mn-modal-success-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11l5 5 9-9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3 class="mn-modal-success-title"><span class="lang-en">Application Received</span><span class="lang-mn">Хүсэлтийг хүлээн авлаа</span></h3>
+                <p class="mn-modal-success-text"><span class="lang-en">Thank you. Our team will contact you within 24&#8211;48 hours.</span><span class="lang-mn">Баярлалаа. Манай баг 24&#8211;48 цагийн дотор холбогдоно.</span></p>
+            </div>
+            <form id="mn-apply-form" class="mn-modal-body" novalidate="novalidate">
+                <div class="mn-modal-step active" data-step="1">
+                    <p class="mn-modal-step-label">01 / 04</p>
+                    <h3 class="mn-modal-step-title"><span class="lang-en">Personal Information</span><span class="lang-mn">Хувийн мэдээлэл</span></h3>
+                    <div class="mn-modal-form">
+                        <div class="mn-modal-grid-2">
+                            <div class="mn-form-field"><label><span class="lang-en">Full Name</span><span class="lang-mn">Овог нэр</span></label><input type="text" name="mn_name" placeholder="Your full name" required="required"/></div>
+                            <div class="mn-form-field"><label><span class="lang-en">Country</span><span class="lang-mn">Улс</span></label><input type="text" name="mn_country" placeholder="Your country"/></div>
+                        </div>
+                        <div class="mn-modal-grid-2">
+                            <div class="mn-form-field"><label><span class="lang-en">Email</span><span class="lang-mn">Имэйл</span></label><input type="email" name="mn_email" placeholder="your@email.com" required="required"/></div>
+                            <div class="mn-form-field"><label><span class="lang-en">WhatsApp / WeChat</span><span class="lang-mn">WhatsApp / WeChat</span></label><input type="text" name="mn_whatsapp" placeholder="+1 000 000 0000"/></div>
+                        </div>
+                        <div class="mn-modal-grid-2">
+                            <div class="mn-form-field"><label><span class="lang-en">Age</span><span class="lang-mn">Нас</span></label><input type="number" name="mn_age" placeholder="Your age" min="18" max="80"/></div>
+                            <div class="mn-form-field"><label><span class="lang-en">Group Size</span><span class="lang-mn">Хэдэн хүн</span></label><select name="mn_groupsize"><option value="">Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mn-modal-step" data-step="2">
+                    <p class="mn-modal-step-label">02 / 04</p>
+                    <h3 class="mn-modal-step-title"><span class="lang-en">Expedition &amp; Timing</span><span class="lang-mn">Аялал &amp; Хугацаа</span></h3>
+                    <div class="mn-modal-form">
+                        <div class="mn-form-field"><label><span class="lang-en">Expedition of Interest</span><span class="lang-mn">Сонирхож буй аялал</span></label><select name="mn_expedition"><option value="">Select expedition</option><option value="Gobi Expedition">Gobi Expedition</option><option value="Altai Expedition">Altai Expedition</option><option value="Khuvsgul Expedition">Khuvsgul Expedition</option><option value="Central Mongolia">Central Mongolia</option><option value="Eastern Steppe">Eastern Steppe</option><option value="Gobi-Altai">Gobi&#8211;Altai Expedition</option><option value="Western Mongolia">Western Mongolia</option><option value="Northern Mongolia">Northern Mongolia</option><option value="Steppe and Lake">Steppe &amp; Lake</option><option value="Other">Other / Not sure yet</option></select></div>
+                        <div class="mn-form-field"><label><span class="lang-en">Preferred Month</span><span class="lang-mn">Аялах сар</span></label><select name="mn_month"><option value="">Select month</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="Flexible">Flexible</option></select></div>
+                        <div class="mn-form-field"><label><span class="lang-en">Private / VIP service?</span><span class="lang-mn">Private / VIP үйлчилгээ?</span></label><div class="mn-radio-group"><div class="mn-radio-option"><input type="radio" id="vip_yes2" name="mn_vip" value="Yes"/><label for="vip_yes2">Yes</label></div><div class="mn-radio-option"><input type="radio" id="vip_no2" name="mn_vip" value="No"/><label for="vip_no2">No</label></div></div></div>
+                    </div>
+                </div>
+                <div class="mn-modal-step" data-step="3">
+                    <p class="mn-modal-step-label">03 / 04</p>
+                    <h3 class="mn-modal-step-title"><span class="lang-en">Experience &amp; Fitness</span><span class="lang-mn">Туршлага &amp; Биеийн бэлтгэл</span></h3>
+                    <div class="mn-modal-form">
+                        <div class="mn-form-field"><label><span class="lang-en">Previous off-road / expedition experience?</span><span class="lang-mn">Өмнө нь off-road аялал хийж байсан уу?</span></label><div class="mn-radio-group"><div class="mn-radio-option"><input type="radio" id="exp_yes2" name="mn_exp" value="Yes"/><label for="exp_yes2">Yes</label></div><div class="mn-radio-option"><input type="radio" id="exp_no2" name="mn_exp" value="No"/><label for="exp_no2">No</label></div></div></div>
+                        <div class="mn-form-field"><label><span class="lang-en">Driving experience</span><span class="lang-mn">Жолооны туршлага</span></label><div class="mn-radio-group"><div class="mn-radio-option"><input type="radio" id="drv_good2" name="mn_driving" value="Good"/><label for="drv_good2">Good</label></div><div class="mn-radio-option"><input type="radio" id="drv_mid2" name="mn_driving" value="Intermediate"/><label for="drv_mid2">Intermediate</label></div><div class="mn-radio-option"><input type="radio" id="drv_beg2" name="mn_driving" value="Beginner"/><label for="drv_beg2">Beginner</label></div></div></div>
+                        <div class="mn-form-field"><label><span class="lang-en">Physical fitness</span><span class="lang-mn">Биеийн бэлтгэл</span></label><div class="mn-radio-group"><div class="mn-radio-option"><input type="radio" id="fit_good2" name="mn_fitness" value="Good"/><label for="fit_good2">Good</label></div><div class="mn-radio-option"><input type="radio" id="fit_mid2" name="mn_fitness" value="Moderate"/><label for="fit_mid2">Moderate</label></div><div class="mn-radio-option"><input type="radio" id="fit_avg2" name="mn_fitness" value="Average"/><label for="fit_avg2">Average</label></div></div></div>
+                    </div>
+                </div>
+                <div class="mn-modal-step" data-step="4">
+                    <p class="mn-modal-step-label">04 / 04</p>
+                    <h3 class="mn-modal-step-title"><span class="lang-en">Expectations &amp; Confirm</span><span class="lang-mn">Хүлээлт &amp; Баталгаажуулах</span></h3>
+                    <div class="mn-modal-form">
+                        <div class="mn-form-field"><label><span class="lang-en">What do you hope to experience?</span><span class="lang-mn">Та энэ аяллаас юу хүлээж байна вэ?</span></label><textarea name="mn_expect" rows="3" placeholder="Freedom, adventure, nature, culture&#8230;"/></div>
+                        <div class="mn-form-field"><label><span class="lang-en">Special requests (optional)</span><span class="lang-mn">Тусгай хүсэлт (заавал биш)</span></label><textarea name="mn_special" rows="2" placeholder="Dietary needs, accessibility, equipment&#8230;"/></div>
+                        <div class="mn-checkbox-agree"><input type="checkbox" id="mn_agree2" name="mn_agree" required="required"/><label for="mn_agree2"><span class="lang-en">I understand the nature of expedition travel and accept the associated risks and conditions.</span><span class="lang-mn">Би аяллын нөхцөл, эрсдэлийг ойлгож байна.</span></label></div>
+                    </div>
+                </div>
+            </form>
+            <div class="mn-modal-footer" id="mn-modal-footer">
+                <button class="mn-modal-back" id="mn-modal-back" disabled="disabled">&#8592; Back</button>
+                <button class="mn-modal-next" id="mn-modal-next">Next &#8594;</button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- =========================================================
+     SHARED: Footer partial
+     ========================================================= -->
+<template id="shared_footer" name="Shared Footer">
+    <footer class="mn-footer">
+        <div class="mn-footer-top">
+            <div>
+                <p class="mn-footer-logo">MINURU MOTORS</p>
+                <p class="mn-footer-tagline">Travel Beyond Limits</p>
+                <p class="mn-footer-social-label">Follow the expedition</p>
+                <div class="mn-footer-socials">
+                    <a href="https://tiktok.com/@minuru.motors" class="mn-footer-social" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://wa.me/97699112233" class="mn-footer-social" target="_blank" rel="noopener">WhatsApp</a>
+                    <a href="mailto:info@minururental.com" class="mn-footer-social">Email</a>
+                </div>
+            </div>
+            <div class="mn-footer-links-col">
+                <p class="mn-footer-col-title">Expeditions</p>
+                <a href="/expeditions/gobi"      class="mn-footer-link">Gobi Expedition</a>
+                <a href="/expeditions/altai"     class="mn-footer-link">Altai Expedition</a>
+                <a href="/expeditions/khuvsgul"  class="mn-footer-link">Khuvsgul Expedition</a>
+                <a href="/#expeditions"          class="mn-footer-link">All 9 Routes &#8594;</a>
+            </div>
+            <div class="mn-footer-links-col">
+                <p class="mn-footer-col-title">Company</p>
+                <a href="/#about"      class="mn-footer-link">About Minuru</a>
+                <a href="/#experience" class="mn-footer-link">Experience</a>
+                <a href="/#routes"     class="mn-footer-link">Routes</a>
+                <a href="/#fleet"      class="mn-footer-link">The Fleet</a>
+                <a href="/#gallery"    class="mn-footer-link">Gallery</a>
+            </div>
+            <div class="mn-footer-links-col">
+                <p class="mn-footer-col-title">Contact</p>
+                <a href="mailto:info@minururental.com" class="mn-footer-link">info@minururental.com</a>
+                <a href="https://wa.me/97699112233" class="mn-footer-link" target="_blank" rel="noopener">+976 9911 2233</a>
+                <p class="mn-footer-link">Ulaanbaatar, Mongolia</p>
+            </div>
+        </div>
+        <div class="mn-footer-bottom">
+            <span class="mn-footer-copy">&#169; 2025 Minuru Motors. All rights reserved.</span>
+            <span class="mn-footer-legal">Travel Beyond Limits</span>
+        </div>
+    </footer>
+</template>
+
+</odoo>
