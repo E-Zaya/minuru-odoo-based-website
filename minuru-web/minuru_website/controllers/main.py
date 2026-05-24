@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+
 from odoo import http
 from odoo.http import request
 
@@ -430,3 +432,31 @@ class MinuruWebsite(http.Controller):
     def expeditions_index(self, **kwargs):
         # Redirect to home expeditions section
         return request.redirect('/#expeditions')
+
+    @http.route('/minuru/apply', type='http', auth='public', methods=['POST'], website=True, csrf=True)
+    def apply_submit(self, **post):
+        raw_age = post.get('mn_age') or ''
+        age = int(raw_age) if raw_age.isdigit() else 0
+        application = request.env['minuru.application'].sudo().create({
+            'name': post.get('mn_name') or 'Website application',
+            'email': post.get('mn_email') or '',
+            'phone': post.get('mn_whatsapp') or '',
+            'country': post.get('mn_country') or '',
+            'age': age,
+            'group_size': post.get('mn_groupsize') or '',
+            'expedition': post.get('mn_expedition') or '',
+            'preferred_month': post.get('mn_month') or '',
+            'vip_service': post.get('mn_vip') or '',
+            'offroad_experience': post.get('mn_exp') or '',
+            'driving_experience': post.get('mn_driving') or '',
+            'physical_fitness': post.get('mn_fitness') or '',
+            'expectations': post.get('mn_expect') or '',
+            'special_requests': post.get('mn_special') or '',
+            'risk_accepted': post.get('mn_agree') in ('on', 'true', '1', 'yes', 'Yes'),
+            'source_url': request.httprequest.referrer or '',
+            'user_agent': request.httprequest.headers.get('User-Agent', ''),
+        })
+        return request.make_response(
+            json.dumps({'ok': True, 'id': application.id}),
+            headers=[('Content-Type', 'application/json')]
+        )

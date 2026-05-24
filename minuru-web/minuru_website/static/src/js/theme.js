@@ -53,8 +53,12 @@
     function closeMobile() {
         if (!mobileMenu) return;
         mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-        scrollEl.style.overflow = '';
+        // Only restore scroll if the modal is also not open
+        const modalBackdrop = document.getElementById('mn-modal-backdrop');
+        if (!modalBackdrop || !modalBackdrop.classList.contains('open')) {
+            document.body.style.overflow = '';
+            scrollEl.style.overflow = '';
+        }
     }
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', function () {
@@ -65,23 +69,53 @@
     }
     if (mobileClose) mobileClose.addEventListener('click', closeMobile);
 
-    // ── Smooth scroll ────────────────────────────────────────
+    // ── Logo → scroll to top ─────────────────────────────────
     document.addEventListener('click', function (e) {
-        const link = e.target.closest('a[href^="#"]');
-        if (!link) return;
-        const href = link.getAttribute('href');
-        if (!href || href === '#') return;
-        const target = document.querySelector(href);
-        if (!target) return;
+        const logo = e.target.closest('.mn-nav-logo');
+        if (!logo) return;
         e.preventDefault();
-        e.stopPropagation();
-        closeMobile();
+        try { scrollEl.scrollTo({ top: 0, behavior: 'smooth' }); }
+        catch (_) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    }, true);
+
+    // ── Smooth scroll (hash links + /#hash links) ────────────
+    function smoothScrollToHash(hash) {
+        if (!hash || hash === '#') return false;
+        // Normalise: strip leading /
+        const id = hash.replace(/^\//, '');
+        const target = document.querySelector(id);
+        if (!target) return false;
         const offset = (navbar ? navbar.offsetHeight : 0) + 16;
         const cRect  = scrollEl.getBoundingClientRect ? scrollEl.getBoundingClientRect().top : 0;
         const tRect  = target.getBoundingClientRect().top;
         const top    = getScrollY() + (tRect - cRect) - offset;
         try { scrollEl.scrollTo({ top, behavior: 'smooth' }); }
         catch (_) { window.scrollTo({ top, behavior: 'smooth' }); }
+        return true;
+    }
+
+    document.addEventListener('click', function (e) {
+        // Plain hash links: href="#section"
+        const hashLink = e.target.closest('a[href^="#"]');
+        if (hashLink) {
+            const href = hashLink.getAttribute('href');
+            if (!href || href === '#') return;
+            if (!smoothScrollToHash(href)) return;
+            e.preventDefault();
+            e.stopPropagation();
+            closeMobile();
+            return;
+        }
+        // Root-relative hash links: href="/#section" (mobile menu)
+        const rootHashLink = e.target.closest('a[href^="/#"]');
+        if (rootHashLink) {
+            const href = rootHashLink.getAttribute('href');       // e.g. "/#routes"
+            const hash = href.replace(/^\//, '');                 // → "#routes"
+            if (!smoothScrollToHash(hash)) return;
+            e.preventDefault();
+            e.stopPropagation();
+            closeMobile();
+        }
     }, true);
 
     // ── Reveal ───────────────────────────────────────────────
@@ -110,6 +144,19 @@
     try { savedLang = localStorage.getItem('mn-lang') || 'en'; } catch (_) {}
     setLang(savedLang);
     langBtns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+
+    // ── Floating CTA ─────────────────────────────────────────
+    const fab = document.getElementById('mn-fab');
+    if (fab) {
+        const heroEl = document.querySelector('.mn-hero');
+        function updateFab() {
+            const threshold = heroEl ? heroEl.offsetHeight * 0.8 : window.innerHeight;
+            fab.classList.toggle('mn-fab-visible', getScrollY() > threshold);
+        }
+        scrollEl.addEventListener('scroll', updateFab, { passive: true });
+        window.addEventListener('scroll',   updateFab, { passive: true });
+        updateFab();
+    }
 
     // ── Stat counters ────────────────────────────────────────
     const countEls = document.querySelectorAll('[data-count]');
@@ -153,6 +200,7 @@
 
         let active = slides.findIndex(function (slide) { return slide.classList.contains('active'); });
         if (active < 0) active = 0;
+        let autoTimer = null;
 
         function show(index) {
             active = (index + slides.length) % slides.length;
@@ -160,12 +208,32 @@
             dots.forEach(function (dot, i) { dot.classList.toggle('active', i === active); });
         }
 
-        if (prev) prev.addEventListener('click', function () { show(active - 1); });
-        if (next) next.addEventListener('click', function () { show(active + 1); });
+        function startAuto() {
+            stopAuto();
+            autoTimer = setInterval(function () { show(active + 1); }, 3800);
+        }
+
+        function stopAuto() {
+            if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        }
+
+        if (prev) prev.addEventListener('click', function () { show(active - 1); stopAuto(); });
+        if (next) next.addEventListener('click', function () { show(active + 1); stopAuto(); });
         dots.forEach(function (dot) {
-            dot.addEventListener('click', function () { show(+dot.dataset.fleetDot || 0); });
+            dot.addEventListener('click', function () { show(+dot.dataset.fleetDot || 0); stopAuto(); });
         });
+
+        // Pause on hover, resume on leave
+        slider.addEventListener('mouseenter', stopAuto);
+        slider.addEventListener('mouseleave', startAuto);
+
+        // Pause when tab not visible
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { stopAuto(); } else { startAuto(); }
+        });
+
         show(active);
+        startAuto();
     });
 
     // ── Editorial gallery ───────────────────────────────────
@@ -201,6 +269,50 @@
         if (prev) prev.addEventListener('click', function () { showGalleryImage(current - 1); });
         if (next) next.addEventListener('click', function () { showGalleryImage(current + 1); });
         showGalleryImage(0);
+    });
+
+    // ── Experience image tabs ───────────────────────────────
+    document.querySelectorAll('[data-experience-tabs]').forEach(function (section) {
+        const tabs = Array.from(section.querySelectorAll('[data-experience-tab]'));
+        const photos = Array.from(section.querySelectorAll('[data-experience-photo]'));
+        const count = section.querySelector('[data-experience-count]');
+        const caption = section.querySelector('[data-experience-caption]');
+        if (!tabs.length || !photos.length) return;
+
+        function showExperience(index) {
+            const active = (index + tabs.length) % tabs.length;
+            tabs.forEach(function (tab, i) { tab.classList.toggle('active', i === active); });
+            photos.forEach(function (photo, i) { photo.classList.toggle('active', i === active); });
+            if (count) count.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(tabs.length).padStart(2, '0');
+            if (caption) caption.textContent = tabs[active].dataset.experienceTitle || '';
+        }
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () { showExperience(+tab.dataset.experienceTab || 0); });
+        });
+        showExperience(0);
+    });
+
+    // ── Routes terrain selector ─────────────────────────────
+    document.querySelectorAll('[data-routes-tabs]').forEach(function (section) {
+        const tabs = Array.from(section.querySelectorAll('[data-route-tab]'));
+        const images = Array.from(section.querySelectorAll('[data-route-image]'));
+        const dir = section.querySelector('[data-route-dir]');
+        const name = section.querySelector('[data-route-name]');
+        if (!tabs.length || !images.length) return;
+
+        function showRoute(index) {
+            const active = (index + tabs.length) % tabs.length;
+            tabs.forEach(function (tab, i) { tab.classList.toggle('active', i === active); });
+            images.forEach(function (image, i) { image.classList.toggle('active', i === active); });
+            if (dir) dir.textContent = tabs[active].dataset.routeDir || '';
+            if (name) name.textContent = tabs[active].dataset.routeName || '';
+        }
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () { showRoute(+tab.dataset.routeTab || 0); });
+        });
+        showRoute(0);
     });
 
     // ============================================================
@@ -335,7 +447,7 @@
         if (!applyForm) return;
 
         // Basic validation step 4
-        const agree = applyForm.querySelector('#mn_agree');
+        const agree = applyForm.querySelector('[name="mn_agree"]');
         if (agree && !agree.checked) {
             agree.focus();
             return;
@@ -349,17 +461,23 @@
         // Disable submit while sending
         if (nextBtn) { nextBtn.disabled = true; nextBtn.textContent = '…'; }
 
-        // Try Odoo contactus endpoint
-        const csrfInput = document.querySelector('input[name="csrf_token"]');
+        // Try the Minuru application endpoint first, then fall back to Odoo contactus.
+        const csrfInput = applyForm.querySelector('input[name="csrf_token"]') || document.querySelector('input[name="csrf_token"]');
         const csrf = csrfInput ? csrfInput.value : '';
 
-        const body = new URLSearchParams();
-        body.append('csrf_token',  csrf);
-        body.append('contact_name', payload.mn_name   || '');
-        body.append('email_from',   payload.mn_email  || '');
-        body.append('phone',        payload.mn_whatsapp || '');
-        body.append('subject',      'Apply Now: ' + (payload.mn_expedition || 'Expedition'));
-        body.append('description',
+        const applicationBody = new URLSearchParams();
+        applicationBody.append('csrf_token', csrf);
+        Object.keys(payload).forEach(function (key) {
+            applicationBody.append(key, payload[key] || '');
+        });
+
+        const contactBody = new URLSearchParams();
+        contactBody.append('csrf_token',  csrf);
+        contactBody.append('contact_name', payload.mn_name   || '');
+        contactBody.append('email_from',   payload.mn_email  || '');
+        contactBody.append('phone',        payload.mn_whatsapp || '');
+        contactBody.append('subject',      'Apply Now: ' + (payload.mn_expedition || 'Expedition'));
+        contactBody.append('description',
             'Country: '   + (payload.mn_country  || '') + '\n' +
             'Age: '       + (payload.mn_age      || '') + '\n' +
             'Group: '     + (payload.mn_groupsize || '') + '\n' +
@@ -373,13 +491,25 @@
             'Special: '   + (payload.mn_special  || '')
         );
 
-        fetch('/contactus', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: body.toString(),
-        })
+        function postForm(url, formBody) {
+            return fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formBody.toString(),
+            }).then(function (response) {
+                if (!response.ok) throw new Error('Request failed');
+                return response;
+            });
+        }
+
+        postForm('/minuru/apply', applicationBody)
         .then(function () { showSuccess(); })
-        .catch(function () { showSuccess(); }); // show success anyway — data captured
+        .catch(function () {
+            return postForm('/contactus', contactBody).then(function () { showSuccess(); });
+        })
+        .catch(function () {
+            if (nextBtn) { nextBtn.disabled = false; nextBtn.textContent = 'Submit'; }
+        });
     }
 
     function showSuccess() {

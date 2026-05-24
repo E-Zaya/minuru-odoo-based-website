@@ -7,6 +7,8 @@
     'website': 'https://www.minururental.com',
     'depends': ['website'],
     'data': [
+        'security/ir.model.access.csv',
+        'views/application_views.xml',
         'views/templates.xml',
     ],
     'assets': {

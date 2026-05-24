@@ -13,7 +13,7 @@
 <!-- =========================================================
      Minuru Motors — Full Homepage
      Design: Black Tomato-inspired dark editorial luxury
-     Sections: Hero · Expeditions(9) · Experience · Routes
+     Sections: Hero · Routes · Expeditions(9) · Experience
                Fleet · Gallery · Testimonials · About · Contact
      ========================================================= -->
 <template id="homepage" inherit_id="website.homepage" name="Minuru Homepage">
@@ -79,6 +79,159 @@
             </div>
         </div>
     </div>
+
+    <!-- ====================================================
+         WHY MONGOLIA — proof boxes
+         ==================================================== -->
+    <section class="mn-why">
+        <div class="mn-container mn-reveal">
+            <div class="mn-box-section-header">
+                <p class="mn-label" style="margin:0;flex-shrink:0;align-self:center;"><span class="lang-en">Why Mongolia</span><span class="lang-mn">Яагаад Монгол вэ</span></p>
+                <h2 class="mn-box-section-title">
+                    <span class="lang-en">The world&#8217;s last true open road.</span>
+                    <span class="lang-mn">Дэлхийн хамгийн жинхэнэ нээлттэй зам.</span>
+                </h2>
+                <p class="mn-box-section-sub">
+                    <span class="lang-en">Desert, mountains, steppe, and lakes in one continuous expedition.</span>
+                    <span class="lang-mn">Цөл, уулс, тал хээр, нуур нэг expedition-д.</span>
+                </p>
+            </div>
+
+            <div class="mn-proof-layout">
+                <div class="mn-proof-panel">
+                    <div class="mn-proof-panel-overlay"/>
+                    <div class="mn-proof-panel-content">
+                        <p class="mn-proof-panel-eyebrow"><span class="lang-en">Built for</span><span class="lang-mn">Зориулагдсан</span></p>
+                        <h3><span class="lang-en">Travellers who want the real thing</span><span class="lang-mn">Жинхэнэ зүйлийг хүссэн аялагчдад</span></h3>
+                        <ul class="mn-check-list">
+                            <li><span class="mn-check-mark"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lang-en">Mongolian-speaking guides on every expedition</span><span class="lang-mn">Бүх аяллалд монгол хэлтэй хөтөч</span></li>
+                            <li><span class="mn-check-mark"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lang-en">Satellite communication in zero-signal terrain</span><span class="lang-mn">Дохиогүй нутагт хиймэл дагуулын холбоо</span></li>
+                            <li><span class="mn-check-mark"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lang-en">Custom-built expedition vehicle, not a rental</span><span class="lang-mn">Түрээс биш, тусгай бүтээгдсэн expedition машин</span></li>
+                            <li><span class="mn-check-mark"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lang-en">Point-to-point routes &#8212; no road ever repeated</span><span class="lang-mn">Цэгээс цэг &#8212; ижил зам хэзээ ч давтагддаггүй</span></li>
+                        </ul>
+                        <div class="mn-proof-panel-stat">
+                            <span class="mn-proof-panel-stat-num">100%</span>
+                            <span class="mn-proof-panel-stat-lbl"><span class="lang-en">Private expeditions</span><span class="lang-mn">Хувийн аяллууд</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mn-proof-grid">
+                    <div class="mn-proof-card">
+                        <div class="mn-proof-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20A14.5 14.5 0 0 0 12 2"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                        </div>
+                        <div class="mn-proof-card-text">
+                            <h3><span class="lang-en">Lowest Density</span><span class="lang-mn">Хамгийн бага нягтрал</span></h3>
+                            <p><span class="lang-en">One of the least crowded countries on earth, built for true distance.</span><span class="lang-mn">Дэлхийн хамгийн цөөн хүнтэй улс.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-proof-card">
+                        <div class="mn-proof-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+                        </div>
+                        <div class="mn-proof-card-text">
+                            <h3><span class="lang-en">Four Worlds</span><span class="lang-mn">Дөрвөн дэлхий</span></h3>
+                            <p><span class="lang-en">Desert, mountains, steppe, and lake country in one route.</span><span class="lang-mn">Цөл, уулс, тал хээр, нуур — нэг маршрутын системд.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-proof-card">
+                        <div class="mn-proof-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l4-8 4 5 3-3 4 6"/><circle cx="18" cy="5" r="2"/></svg>
+                        </div>
+                        <div class="mn-proof-card-text">
+                            <h3><span class="lang-en">Roadless Terrain</span><span class="lang-mn">Замгүй нутаг</span></h3>
+                            <p><span class="lang-en">Point-to-point travel where the route always moves forward.</span><span class="lang-mn">Цэгээс цэг рүү. Маршрут үргэлж урагшилна.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-proof-card">
+                        <div class="mn-proof-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="mn-proof-card-text">
+                            <h3><span class="lang-en">Freedom + Safety</span><span class="lang-mn">Эрх чөлөө + Аюулгүй</span></h3>
+                            <p><span class="lang-en">Independent rhythm, backed by convoy teamwork and support.</span><span class="lang-mn">Бие даасан хэмнэл, дэмжлэгээр баталгаажсан.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         ROUTES — static map image + 5 regions
+         ==================================================== -->
+    <section id="routes" class="mn-routes">
+        <div class="mn-container mn-reveal">
+            <div class="mn-routes-showcase" data-routes-tabs="true">
+                <div class="mn-routes-copy">
+                    <p class="mn-label"><span class="lang-en">Routes</span><span class="lang-mn">Маршрутууд</span></p>
+                    <h2 class="mn-section-title"><span class="lang-en">Mongolia&#8217;s Terrain</span><span class="lang-mn">Монголын Нутаг</span></h2>
+                    <p class="mn-section-sub">
+                        <span class="lang-en">Point-to-point routes. You never travel the same road twice.</span>
+                        <span class="lang-mn">Цэгээс цэг рүү. Ижил замыг давтдаггүй.</span>
+                    </p>
+                    <a href="#expeditions" class="mn-btn-outline"><span class="lang-en">Choose a route</span><span class="lang-mn">Маршрут сонгох</span></a>
+                </div>
+
+                <div class="mn-routes-map">
+                    <figure class="mn-route-image active" data-route-image="0">
+                        <img src="/minuru_website/static/src/img/mongolia_image_02.png" alt="Gobi Desert"/>
+                    </figure>
+                    <figure class="mn-route-image" data-route-image="1">
+                        <img src="/minuru_website/static/src/img/mongolia_image_03.png" alt="Altai Mountains"/>
+                    </figure>
+                    <figure class="mn-route-image" data-route-image="2">
+                        <img src="/minuru_website/static/src/img/mongolia_image_04.png" alt="Khuvsgul and Taiga"/>
+                    </figure>
+                    <figure class="mn-route-image" data-route-image="3">
+                        <img src="/minuru_website/static/src/img/mongolia_image_05.png" alt="Eastern Steppe"/>
+                    </figure>
+                    <figure class="mn-route-image" data-route-image="4">
+                        <img src="/minuru_website/static/src/img/mongolia_image_08.png" alt="Central Mongolia"/>
+                    </figure>
+                    <div class="mn-routes-map-overlay"/>
+                    <div class="mn-route-map-note">
+                        <span data-route-dir="true">South</span>
+                        <strong data-route-name="true">Gobi Desert</strong>
+                    </div>
+                </div>
+
+                <div class="mn-routes-regions">
+                    <button type="button" class="mn-route-region active" data-route-tab="0" data-route-dir="South" data-route-name="Gobi Desert">
+                        <span class="mn-route-region-dir"><span class="lang-en">South</span><span class="lang-mn">Өмнөд</span></span>
+                        <span class="mn-route-region-name">Gobi Desert</span>
+                        <span class="mn-route-region-desc">Dunes &#183; Canyons &#183; Red rock</span>
+                        <span class="mn-route-region-meta">7&#8211;9 days &#183; Entry</span>
+                    </button>
+                    <button type="button" class="mn-route-region" data-route-tab="1" data-route-dir="West" data-route-name="Altai Mountains">
+                        <span class="mn-route-region-dir"><span class="lang-en">West</span><span class="lang-mn">Баруун</span></span>
+                        <span class="mn-route-region-name">Altai Mountains</span>
+                        <span class="mn-route-region-desc">Glaciers &#183; High passes</span>
+                        <span class="mn-route-region-meta">8&#8211;10 days &#183; Advanced</span>
+                    </button>
+                    <button type="button" class="mn-route-region" data-route-tab="2" data-route-dir="North" data-route-name="Khuvsgul &amp; Taiga">
+                        <span class="mn-route-region-dir"><span class="lang-en">North</span><span class="lang-mn">Хойд</span></span>
+                        <span class="mn-route-region-name">Khuvsgul &amp; Taiga</span>
+                        <span class="mn-route-region-desc">Forests &#183; Crystal lakes</span>
+                        <span class="mn-route-region-meta">7&#8211;9 days &#183; Relaxed</span>
+                    </button>
+                    <button type="button" class="mn-route-region" data-route-tab="3" data-route-dir="East" data-route-name="Eastern Steppe">
+                        <span class="mn-route-region-dir"><span class="lang-en">East</span><span class="lang-mn">Зүүн</span></span>
+                        <span class="mn-route-region-name">Eastern Steppe</span>
+                        <span class="mn-route-region-desc">Endless grasslands</span>
+                        <span class="mn-route-region-meta">7&#8211;9 days &#183; Off-grid</span>
+                    </button>
+                    <button type="button" class="mn-route-region" data-route-tab="4" data-route-dir="Centre" data-route-name="Heartland">
+                        <span class="mn-route-region-dir"><span class="lang-en">Centre</span><span class="lang-mn">Төв</span></span>
+                        <span class="mn-route-region-name">Heartland</span>
+                        <span class="mn-route-region-desc">Culture &#183; History</span>
+                        <span class="mn-route-region-meta">6&#8211;8 days &#183; Culture</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ====================================================
          EXPEDITIONS — 3x3 grid, 9 routes
@@ -245,7 +398,6 @@
             </div>
 
             <div class="mn-expeditions-footer mn-reveal">
-                <p class="mn-expeditions-footer-text">&#8220;Whichever route you choose &#8212; this is not a tour. This is a living expedition.&#8221;</p>
                 <button class="mn-btn-outline mn-apply-btn"><span class="lang-en">Apply for Expedition &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></button>
             </div>
         </div>
@@ -257,101 +409,128 @@
          ==================================================== -->
     <section id="experience" class="mn-experience">
         <div class="mn-container">
-            <div class="mn-experience-header mn-reveal">
-                <p class="mn-label"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></p>
-                <h2 class="mn-experience-title">
-                    <span class="lang-en">How Do You<br/>Want to Feel?</span>
-                    <span class="lang-mn">Та ямар<br/>мэдрэмж авах вэ?</span>
-                </h2>
-                <p class="mn-experience-sub">
-                    <span class="lang-en">It&#8217;s not where you go. It&#8217;s what you carry back.</span>
-                    <span class="lang-mn">Хаана явахаас биш, юу авч буцахыг боддог.</span>
-                </p>
-            </div>
+            <div class="mn-experience-showcase mn-reveal" data-experience-tabs="true">
+                <div class="mn-experience-media">
+                    <figure class="mn-experience-photo active" data-experience-photo="0">
+                        <img src="/minuru_website/static/src/img/mongolia_image_05.png" alt="Open Mongolian steppe"/>
+                    </figure>
+                    <figure class="mn-experience-photo" data-experience-photo="1">
+                        <img src="/minuru_website/static/src/img/mongolia_image_09.png" alt="Remote lake and steppe"/>
+                    </figure>
+                    <figure class="mn-experience-photo" data-experience-photo="2">
+                        <img src="/minuru_website/static/src/img/mongolia_image_10.png" alt="Rugged Mongolian terrain"/>
+                    </figure>
+                    <figure class="mn-experience-photo" data-experience-photo="3">
+                        <img src="/minuru_website/static/src/img/mongolia_image_03.png" alt="Altai mountain landscape"/>
+                    </figure>
+                    <div class="mn-experience-media-caption">
+                        <span data-experience-count="true">01 / 04</span>
+                        <strong data-experience-caption="true">Freedom</strong>
+                    </div>
+                </div>
 
-            <div class="mn-feels-grid mn-reveal mn-reveal-delay-1">
-                <div class="mn-feel">
-                    <div class="mn-feel-num">01</div>
-                    <h3 class="mn-feel-title"><span class="lang-en">Freedom</span><span class="lang-mn">Эрх чөлөө</span></h3>
-                    <p class="mn-feel-desc">Drive without a road, sleep under a sky full of stars, stop wherever the land tells you to. No itinerary. No schedule. Just you and the horizon.</p>
-                </div>
-                <div class="mn-feel">
-                    <div class="mn-feel-num">02</div>
-                    <h3 class="mn-feel-title"><span class="lang-en">Solitude</span><span class="lang-mn">Ганцаардал</span></h3>
-                    <p class="mn-feel-desc">Days can pass without seeing another human being. The rare, almost forgotten sensation of being truly alone with the world.</p>
-                </div>
-                <div class="mn-feel">
-                    <div class="mn-feel-num">03</div>
-                    <h3 class="mn-feel-title"><span class="lang-en">Adventure</span><span class="lang-mn">Адал явдал</span></h3>
-                    <p class="mn-feel-desc">River crossings, 45&#176; climbs, sand and mud and mountain snow. Every day is a problem worth solving, a terrain worth conquering.</p>
-                </div>
-                <div class="mn-feel">
-                    <div class="mn-feel-num">04</div>
-                    <h3 class="mn-feel-title"><span class="lang-en">Awe</span><span class="lang-mn">Гайхшрал</span></h3>
-                    <p class="mn-feel-desc">Standing at the edge of the Gobi dunes at golden hour. The Altai at dawn. Khuvsgul in perfect stillness. Some things cannot be described.</p>
+                <div class="mn-experience-copy">
+                    <p class="mn-label"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></p>
+                    <h2 class="mn-experience-title">
+                        <span class="lang-en">How Do You<br/>Want to Feel?</span>
+                        <span class="lang-mn">Та ямар<br/>мэдрэмж авах вэ?</span>
+                    </h2>
+                    <p class="mn-experience-sub">
+                        <span class="lang-en">It&#8217;s not where you go. It&#8217;s what you carry back.</span>
+                        <span class="lang-mn">Хаана явахаас биш, юу авч буцахыг боддог.</span>
+                    </p>
+
+                    <div class="mn-feels-list">
+                        <button type="button" class="mn-feel active" data-experience-tab="0" data-experience-title="Freedom">
+                            <span class="mn-feel-num">01</span>
+                            <span class="mn-feel-body">
+                                <span class="mn-feel-title"><span class="lang-en">Freedom</span><span class="lang-mn">Эрх чөлөө</span></span>
+                                <span class="mn-feel-desc">Drive without a road, sleep under a sky full of stars, stop wherever the land tells you to.</span>
+                            </span>
+                        </button>
+                        <button type="button" class="mn-feel" data-experience-tab="1" data-experience-title="Solitude">
+                            <span class="mn-feel-num">02</span>
+                            <span class="mn-feel-body">
+                                <span class="mn-feel-title"><span class="lang-en">Solitude</span><span class="lang-mn">Ганцаардал</span></span>
+                                <span class="mn-feel-desc">Days can pass without seeing another human being. A rare quiet, far beyond routine.</span>
+                            </span>
+                        </button>
+                        <button type="button" class="mn-feel" data-experience-tab="2" data-experience-title="Adventure">
+                            <span class="mn-feel-num">03</span>
+                            <span class="mn-feel-body">
+                                <span class="mn-feel-title"><span class="lang-en">Adventure</span><span class="lang-mn">Адал явдал</span></span>
+                                <span class="mn-feel-desc">River crossings, steep climbs, sand, mud, snow, and terrain worth solving.</span>
+                            </span>
+                        </button>
+                        <button type="button" class="mn-feel" data-experience-tab="3" data-experience-title="Awe">
+                            <span class="mn-feel-num">04</span>
+                            <span class="mn-feel-body">
+                                <span class="mn-feel-title"><span class="lang-en">Awe</span><span class="lang-mn">Гайхшрал</span></span>
+                                <span class="mn-feel-desc">The Gobi at golden hour. The Altai at dawn. Khuvsgul in perfect stillness.</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <blockquote class="mn-experience-quote">
+                        <p>&#8220;This is not a tour. This is a living, breathing expedition &#8212; built for those who want the real thing.&#8221;</p>
+                    </blockquote>
                 </div>
             </div>
-
-            <blockquote class="mn-experience-quote mn-reveal mn-reveal-delay-2">
-                <p>&#8220;This is not a tour. This is a living, breathing expedition &#8212; built for those who want the real thing.&#8221;</p>
-            </blockquote>
         </div>
     </section>
 
     <!-- ====================================================
-         ROUTES — static map image + 5 regions
+         FREEDOM + SAFETY — support boxes
          ==================================================== -->
-    <section id="routes" class="mn-routes">
+    <section class="mn-support">
         <div class="mn-container mn-reveal">
-            <div class="mn-section-header">
-                <div>
-                    <p class="mn-label"><span class="lang-en">Routes</span><span class="lang-mn">Маршрутууд</span></p>
-                    <h2 class="mn-section-title"><span class="lang-en">Mongolia&#8217;s Terrain</span><span class="lang-mn">Монголын Нутаг</span></h2>
-                </div>
-                <p class="mn-section-sub">
-                    <span class="lang-en">Point-to-point routes &#8212;<br/>you never travel the same road twice.</span>
-                    <span class="lang-mn">Цэгээс цэг рүү &#8212;<br/>ижил замыг давтдаггүй.</span>
-                </p>
+            <div class="mn-box-section-header mn-box-section-header-center">
+                <p class="mn-label"><span class="lang-en">Your Support System</span><span class="lang-mn">Дэмжлэгийн систем</span></p>
+                <h2 class="mn-box-section-title">
+                    <span class="lang-en">Everything in place,<br/>before you leave.</span>
+                    <span class="lang-mn">Явахаас өмнө<br/>бүх зүйл бэлэн.</span>
+                </h2>
             </div>
-        </div>
 
-        <div class="mn-routes-map">
-            <img src="/minuru_website/static/src/img/mongolia_image_10.png"
-                 alt="Mongolia terrain overview" class="mn-routes-map-img"/>
-            <div class="mn-routes-map-overlay"/>
-            <div class="mn-route-pin mn-route-pin-ub"><span class="mn-pin-dot"/><span class="mn-pin-label">Ulaanbaatar</span></div>
-            <div class="mn-route-pin mn-route-pin-gobi"><span class="mn-pin-dot"/><span class="mn-pin-label">Gobi</span></div>
-            <div class="mn-route-pin mn-route-pin-altai"><span class="mn-pin-dot"/><span class="mn-pin-label">Altai</span></div>
-            <div class="mn-route-pin mn-route-pin-khuvsgul"><span class="mn-pin-dot"/><span class="mn-pin-label">Khuvsgul</span></div>
-            <div class="mn-route-pin mn-route-pin-east"><span class="mn-pin-dot"/><span class="mn-pin-label">Eastern Steppe</span></div>
-        </div>
-
-        <div class="mn-container">
-            <div class="mn-routes-regions mn-reveal">
-                <div class="mn-route-region">
-                    <p class="mn-route-region-dir"><span class="lang-en">South</span><span class="lang-mn">Өмнөд</span></p>
-                    <p class="mn-route-region-name">Gobi Desert</p>
-                    <p class="mn-route-region-desc">Dunes &#183; Canyons &#183; Red rock</p>
-                </div>
-                <div class="mn-route-region">
-                    <p class="mn-route-region-dir"><span class="lang-en">West</span><span class="lang-mn">Баруун</span></p>
-                    <p class="mn-route-region-name">Altai Mountains</p>
-                    <p class="mn-route-region-desc">Glaciers &#183; High passes</p>
-                </div>
-                <div class="mn-route-region">
-                    <p class="mn-route-region-dir"><span class="lang-en">North</span><span class="lang-mn">Хойд</span></p>
-                    <p class="mn-route-region-name">Khuvsgul &amp; Taiga</p>
-                    <p class="mn-route-region-desc">Forests &#183; Crystal lakes</p>
-                </div>
-                <div class="mn-route-region">
-                    <p class="mn-route-region-dir"><span class="lang-en">East</span><span class="lang-mn">Зүүн</span></p>
-                    <p class="mn-route-region-name">Eastern Steppe</p>
-                    <p class="mn-route-region-desc">Endless grasslands</p>
-                </div>
-                <div class="mn-route-region">
-                    <p class="mn-route-region-dir"><span class="lang-en">Centre</span><span class="lang-mn">Төв</span></p>
-                    <p class="mn-route-region-name">Heartland</p>
-                    <p class="mn-route-region-desc">Culture &#183; History</p>
+            <div class="mn-support-timeline">
+                <div class="mn-support-tl-line"/>
+                <div class="mn-support-tl-items">
+                    <div class="mn-support-tl-item">
+                        <div class="mn-support-tl-dot">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1"/></svg>
+                        </div>
+                        <div class="mn-support-tl-body">
+                            <h3><span class="lang-en">Independent Rhythm</span><span class="lang-mn">Бие даасан хэмнэл</span></h3>
+                            <p><span class="lang-en">Drive, stop, rest, and explore at a pace that feels natural to your group.</span><span class="lang-mn">Таны бүлэгт тохирсон хурдаар явах, зогсох, амрах.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-support-tl-item">
+                        <div class="mn-support-tl-dot">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1"/></svg>
+                        </div>
+                        <div class="mn-support-tl-body">
+                            <h3><span class="lang-en">Convoy Teamwork</span><span class="lang-mn">Конвойн хамтын ажил</span></h3>
+                            <p><span class="lang-en">In difficult terrain, river crossings, sand, and mud, the team moves together.</span><span class="lang-mn">Хүнд газар, гол гатлах, элс, шавар — баг хамтдаа явна.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-support-tl-item">
+                        <div class="mn-support-tl-dot">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1"/></svg>
+                        </div>
+                        <div class="mn-support-tl-body">
+                            <h3><span class="lang-en">Safety &amp; Insurance</span><span class="lang-mn">Аюулгүй байдал &amp; Даатгал</span></h3>
+                            <p><span class="lang-en">Expedition team support, first-aid readiness, travel insurance, and emergency planning.</span><span class="lang-mn">Expedition багийн дэмжлэг, анхны тусламж, даатгал, онцгой байдлын төлөвлөгөө.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-support-tl-item">
+                        <div class="mn-support-tl-dot">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1"/></svg>
+                        </div>
+                        <div class="mn-support-tl-body">
+                            <h3><span class="lang-en">Mobile Comfort</span><span class="lang-mn">Хөдөлгөөнт тав тух</span></h3>
+                            <p><span class="lang-en">A self-contained base with heat, water, power, sleeping space, and recovery equipment.</span><span class="lang-mn">Дулаан, ус, цахилгаан, унтах зай, нөхөн сэргээх тоног төхөөрөмжтэй бие даасан бааз.</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -375,14 +554,50 @@
                 <p class="mn-fleet-desc">A fully autonomous, all-terrain vehicle built for Mongolia&#8217;s most extreme conditions. From the Gobi at 40&#176;C to the Altai at &#8722;30&#176;C &#8212; it handles everything.</p>
 
                 <div class="mn-specs-grid">
-                    <div class="mn-spec"><p class="mn-spec-label">Engine</p><p class="mn-spec-value">6-cylinder, 310hp</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Torque</p><p class="mn-spec-value">1,280 Nm</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Climb Angle</p><p class="mn-spec-value">Up to 45&#176;</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Battery</p><p class="mn-spec-value">48V lithium &#8776;15kWh</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Water</p><p class="mn-spec-value">300L fresh / 120L grey</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Temperature</p><p class="mn-spec-value">Rated to &#8722;30&#176;C</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Sleeping</p><p class="mn-spec-value">2&#8211;3 persons</p></div>
-                    <div class="mn-spec"><p class="mn-spec-label">Winch</p><p class="mn-spec-value">20,000 lbs</p></div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Engine</span><span class="lang-mn">Хөдөлгүүр</span></p>
+                        <p class="mn-spec-value">6-cylinder, 310hp</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Torque</span><span class="lang-mn">Хүч</span></p>
+                        <p class="mn-spec-value">1,280 Nm</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-8 4 5 3-3 4 6"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Climb Angle</span><span class="lang-mn">Авирах өнцөг</span></p>
+                        <p class="mn-spec-value">Up to 45&#176;</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="1"/><line x1="12" y1="6" x2="12" y2="12"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Battery</span><span class="lang-mn">Батерей</span></p>
+                        <p class="mn-spec-value">48V &#8776;15kWh</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 9 2 12s4.48 10 10 10 10-7 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Water</span><span class="lang-mn">Ус</span></p>
+                        <p class="mn-spec-value">300L / 120L grey</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Temperature</span><span class="lang-mn">Температур</span></p>
+                        <p class="mn-spec-value">Rated &#8722;30&#176;C</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Sleeping</span><span class="lang-mn">Унтах зай</span></p>
+                        <p class="mn-spec-value">2&#8211;3 persons</p>
+                    </div>
+                    <div class="mn-spec">
+                        <span class="mn-spec-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 1 21 12a10 10 0 0 1-2.93 7.07"/><path d="M4.93 4.93A10 10 0 0 0 3 12a10 10 0 0 0 1.93 5.87"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M8.46 8.46a5 5 0 0 0 0 7.07"/></svg></span>
+                        <p class="mn-spec-label"><span class="lang-en">Winch</span><span class="lang-mn">Татагч</span></p>
+                        <p class="mn-spec-value">20,000 lbs</p>
+                    </div>
+                </div>
+                <div class="mn-section-actions">
+                    <a href="#contact" class="mn-btn-outline"><span class="lang-en">Ask about availability</span><span class="lang-mn">Боломжит хугацаа асуух</span></a>
+                    <button type="button" class="mn-text-link mn-apply-btn"><span class="lang-en">Apply for a private expedition</span><span class="lang-mn">Хувийн аяллын хүсэлт</span></button>
                 </div>
             </div>
 
@@ -506,6 +721,10 @@
                 </button>
                 </div>
             </div>
+            <div class="mn-gallery-actions">
+                <p><span class="lang-en">Like what you see? Choose a route built around this kind of terrain.</span><span class="lang-mn">Таалагдаж байна уу? Ийм нутагт тохирсон маршрутаа сонгоорой.</span></p>
+                <a href="#expeditions" class="mn-btn-outline"><span class="lang-en">View expeditions</span><span class="lang-mn">Аяллууд үзэх</span></a>
+            </div>
         </div>
     </section>
 
@@ -514,29 +733,72 @@
          ==================================================== -->
     <section class="mn-testimonials">
         <div class="mn-container mn-reveal">
-            <p class="mn-label"><span class="lang-en">What Travellers Say</span><span class="lang-mn">Аялагчдын санал</span></p>
-            <div class="mn-testimonials-grid">
-                <blockquote class="mn-testimonial">
-                    <p class="mn-testimonial-quote">&#8220;A once-in-a-lifetime experience. Mongolia is unlike anything else, and Minuru made it feel effortless and utterly real.&#8221;</p>
-                    <footer class="mn-testimonial-footer">
-                        <p class="mn-testimonial-name">James K.</p>
-                        <p class="mn-testimonial-detail">United Kingdom &#183; Gobi Expedition</p>
-                    </footer>
-                </blockquote>
-                <blockquote class="mn-testimonial">
-                    <p class="mn-testimonial-quote">&#8220;We drove across the Gobi with zero tourist infrastructure &#8212; pure freedom. The kind of trip that changes your perspective on everything.&#8221;</p>
-                    <footer class="mn-testimonial-footer">
-                        <p class="mn-testimonial-name">Sarah M.</p>
-                        <p class="mn-testimonial-detail">United States &#183; Altai Expedition</p>
-                    </footer>
-                </blockquote>
-                <blockquote class="mn-testimonial">
-                    <p class="mn-testimonial-quote">&#8220;The attention to detail, the safety, the sheer scale of it. We&#8217;re already planning our return. There&#8217;s simply nothing else like it.&#8221;</p>
-                    <footer class="mn-testimonial-footer">
-                        <p class="mn-testimonial-name">Thomas R.</p>
-                        <p class="mn-testimonial-detail">Germany &#183; Khuvsgul Expedition</p>
-                    </footer>
-                </blockquote>
+            <div class="mn-testimonials-layout">
+                <div class="mn-testimonials-intro">
+                    <p class="mn-label"><span class="lang-en">Expedition Notes</span><span class="lang-mn">Аялагчдын тэмдэглэл</span></p>
+                    <h2 class="mn-testimonials-title"><span class="lang-en">Stories from<br/>the route</span><span class="lang-mn">Маршрутын<br/>түүхүүд</span></h2>
+                    <p class="mn-testimonials-sub"><span class="lang-en">Small private groups. Real terrain. Travellers who came back with more than photos.</span><span class="lang-mn">Жижиг хувийн баг. Жинхэнэ нутаг. Зурагнаас илүү дурсамж.</span></p>
+                </div>
+
+                <div class="mn-testimonials-board">
+                    <blockquote class="mn-testimonial mn-testimonial-feature">
+                        <span class="mn-testimonial-bigquote" aria-hidden="true">&#8220;</span>
+                        <div class="mn-testimonial-stars" aria-label="5 out of 5 stars">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="mn-testimonial-quote">We drove across the Gobi with zero tourist infrastructure &#8212; pure freedom. The kind of trip that changes your perspective on everything.</p>
+                        <footer class="mn-testimonial-footer">
+                            <span class="mn-testimonial-avatar">SM</span>
+                            <div>
+                                <p class="mn-testimonial-name">Sarah M.</p>
+                                <p class="mn-testimonial-detail">United States</p>
+                            </div>
+                            <span class="mn-testimonial-badge">Gobi &#183; 9 days</span>
+                        </footer>
+                    </blockquote>
+                    <div class="mn-testimonials-side">
+                        <blockquote class="mn-testimonial">
+                            <div class="mn-testimonial-stars" aria-label="5 out of 5 stars">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="mn-testimonial-quote">Mongolia is unlike anything else, and Minuru made it feel effortless and utterly real.</p>
+                            <footer class="mn-testimonial-footer">
+                                <span class="mn-testimonial-avatar">JK</span>
+                                <div>
+                                    <p class="mn-testimonial-name">James K.</p>
+                                    <p class="mn-testimonial-detail">United Kingdom</p>
+                                </div>
+                                <span class="mn-testimonial-badge">Altai</span>
+                            </footer>
+                        </blockquote>
+                        <blockquote class="mn-testimonial">
+                            <div class="mn-testimonial-stars" aria-label="5 out of 5 stars">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="mn-testimonial-quote">The attention to detail, the safety, the sheer scale of it. We&#8217;re already planning our return.</p>
+                            <footer class="mn-testimonial-footer">
+                                <span class="mn-testimonial-avatar">TR</span>
+                                <div>
+                                    <p class="mn-testimonial-name">Thomas R.</p>
+                                    <p class="mn-testimonial-detail">Germany</p>
+                                </div>
+                                <span class="mn-testimonial-badge">Khuvsgul</span>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -563,15 +825,108 @@
                         <p class="mn-about-mission-text">To set the global standard for premium expedition travel in Mongolia &#8212; combining freedom, safety, and authentic wilderness at the highest level.</p>
                     </div>
                 </div>
-                <div>
-                    <div class="mn-about-stats">
-                        <div class="mn-about-stat"><p class="mn-about-stat-val">1.5M</p><p class="mn-about-stat-lbl">sq km of terrain</p></div>
-                        <div class="mn-about-stat"><p class="mn-about-stat-val">9</p><p class="mn-about-stat-lbl">exclusive routes</p></div>
-                        <div class="mn-about-stat"><p class="mn-about-stat-val">100%</p><p class="mn-about-stat-lbl">private expeditions</p></div>
-                        <div class="mn-about-stat"><p class="mn-about-stat-val">7+</p><p class="mn-about-stat-lbl">years in Mongolia</p></div>
-                        <div class="mn-about-img-wrap">
-                            <img src="/minuru_website/static/src/img/mongolia_image_11.png"
-                                 alt="Mongolia wilderness" class="mn-about-img"/>
+                <div class="mn-about-visual">
+                    <div class="mn-about-img-wrap">
+                        <img src="/minuru_website/static/src/img/mongolia_image_11.png"
+                             alt="Mongolia wilderness" class="mn-about-img"/>
+                    </div>
+                    <blockquote class="mn-about-founder-quote">
+                        <p>&#8220;Mongolia is not a destination. It is a confrontation with scale, silence, and your own limits. We built Minuru to give people that confrontation &#8212; properly.&#8221;</p>
+                        <footer>
+                            <span class="mn-about-founder-name">Founder, Minuru Motors</span>
+                            <span class="mn-about-founder-loc">Ulaanbaatar, Mongolia</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         HOW IT WORKS — vertical timeline + hero stats
+         ==================================================== -->
+    <section class="mn-process">
+        <div class="mn-container mn-reveal">
+            <div class="mn-process-layout">
+                <div class="mn-process-left">
+                    <div class="mn-box-section-header-center" style="text-align:left;margin-inline:0;">
+                        <p class="mn-label"><span class="lang-en">How it works</span><span class="lang-mn">Үйл явц</span></p>
+                        <h2 class="mn-box-section-title" style="font-size:clamp(2rem,3.8vw,4rem);">
+                            <span class="lang-en">From application<br/>to expedition.</span>
+                            <span class="lang-mn">Хүсэлтээс<br/>аялал хүртэл.</span>
+                        </h2>
+                    </div>
+
+                    <div class="mn-process-facts-hero">
+                        <div class="mn-process-fact-hero">
+                            <span class="mn-process-fact-num">&#8364;10k</span>
+                            <span class="mn-process-fact-lbl"><span class="lang-en">per 10-day expedition</span><span class="lang-mn">10 хоногийн аялал</span></span>
+                        </div>
+                        <div class="mn-process-fact-hero">
+                            <span class="mn-process-fact-num">2&#8211;3</span>
+                            <span class="mn-process-fact-lbl"><span class="lang-en">travellers per team</span><span class="lang-mn">хүнтэй баг</span></span>
+                        </div>
+                        <div class="mn-process-fact-hero">
+                            <span class="mn-process-fact-num">48h</span>
+                            <span class="mn-process-fact-lbl"><span class="lang-en">response time</span><span class="lang-mn">хариу өгөх хугацаа</span></span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="mn-btn-outline" style="display:inline-flex;margin-top:0;">
+                        <span class="lang-en">Apply for your expedition &#8594;</span>
+                        <span class="lang-mn">Хүсэлт илгээх &#8594;</span>
+                    </a>
+                </div>
+
+                <div class="mn-process-timeline">
+                    <div class="mn-process-tl-item mn-reveal mn-reveal-delay-1">
+                        <div class="mn-process-tl-dot">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div class="mn-process-tl-body">
+                            <span class="mn-process-tl-num">01</span>
+                            <h3><span class="lang-en">Apply</span><span class="lang-mn">Хүсэлт</span></h3>
+                            <p><span class="lang-en">Tell us your group, timing, route interest, and travel expectations.</span><span class="lang-mn">Таны баг, хугацаа, маршрут, аяллын хүлээлтийг хэлнэ үү.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-process-tl-item mn-reveal mn-reveal-delay-2">
+                        <div class="mn-process-tl-dot">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="mn-process-tl-body">
+                            <span class="mn-process-tl-num">02</span>
+                            <h3><span class="lang-en">Consultation</span><span class="lang-mn">Зөвлөгөө</span></h3>
+                            <p><span class="lang-en">We review fit, timing, driving comfort, and the right expedition level.</span><span class="lang-mn">Тохирол, хугацаа, жолоодох тав тух, expedition түвшнийг хянана.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-process-tl-item mn-reveal mn-reveal-delay-3">
+                        <div class="mn-process-tl-dot">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+                        </div>
+                        <div class="mn-process-tl-body">
+                            <span class="mn-process-tl-num">03</span>
+                            <h3><span class="lang-en">Route Plan</span><span class="lang-mn">Маршрут</span></h3>
+                            <p><span class="lang-en">Your point-to-point itinerary shaped around terrain, season, and pace.</span><span class="lang-mn">Цэгээс цэг маршрут нь нутаг, улирал, хурдаар тодорхойлогдоно.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-process-tl-item mn-reveal mn-reveal-delay-4">
+                        <div class="mn-process-tl-dot">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <div class="mn-process-tl-body">
+                            <span class="mn-process-tl-num">04</span>
+                            <h3><span class="lang-en">Preparation</span><span class="lang-mn">Бэлтгэл</span></h3>
+                            <p><span class="lang-en">Vehicles, guides, insurance, recovery gear, and camp systems prepared.</span><span class="lang-mn">Машин, хөтөч, даатгал, аврах хэрэгсэл, кемп системийг бэлтгэнэ.</span></p>
+                        </div>
+                    </div>
+                    <div class="mn-process-tl-item mn-process-tl-last mn-reveal mn-reveal-delay-5">
+                        <div class="mn-process-tl-dot mn-process-tl-dot-final">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="mn-process-tl-body">
+                            <span class="mn-process-tl-num">05</span>
+                            <h3><span class="lang-en">Expedition</span><span class="lang-mn">Аялал</span></h3>
+                            <p><span class="lang-en">You travel as a small private team, supported by the Minuru crew.</span><span class="lang-mn">Та Minuru багийн дэмжлэгтэйгээр жижиг хувийн багаар аялна.</span></p>
                         </div>
                     </div>
                 </div>
@@ -586,7 +941,7 @@
         <div class="mn-container">
             <div class="mn-contact-header">
                 <p class="mn-label"><span class="lang-en">Contact</span><span class="lang-mn">Холбоо барих</span></p>
-                <h2 class="mn-contact-title"><span class="lang-en">Ready to Begin?</span><span class="lang-mn">Бэлэн үү?</span></h2>
+                <h2 class="mn-contact-title"><span class="lang-en">Tell Us About<br/>Your Group</span><span class="lang-mn">Таны Багийн<br/>Тухай Хэлнэ үү</span></h2>
                 <p class="mn-contact-sub">Our team responds within 24&#8211;48 hours. All expeditions are fully private and custom-built.</p>
             </div>
 
@@ -597,37 +952,15 @@
                         <div class="mn-form-field"><label>Full Name</label><input type="text" name="contact_name" placeholder="Your name"/></div>
                         <div class="mn-form-field"><label>Country</label><input type="text" name="partner_country" placeholder="Your country"/></div>
                     </div>
-                    <div class="mn-form-field"><label>Email</label><input type="email" name="email_from" placeholder="your@email.com"/></div>
-                    <div class="mn-form-field">
-                        <label>Expedition of Interest</label>
-                        <select name="subject">
-                            <option value="">Select expedition</option>
-                            <option value="Gobi Expedition">Gobi Expedition</option>
-                            <option value="Altai Expedition">Altai Expedition</option>
-                            <option value="Khuvsgul Expedition">Khuvsgul Expedition</option>
-                            <option value="Central Mongolia">Central Mongolia</option>
-                            <option value="Eastern Steppe">Eastern Steppe</option>
-                            <option value="Gobi-Altai">Gobi&#8211;Altai Expedition</option>
-                            <option value="Western Mongolia">Western Mongolia</option>
-                            <option value="Northern Mongolia">Northern Mongolia</option>
-                            <option value="Steppe and Lake">Steppe &amp; Lake</option>
-                        </select>
-                    </div>
                     <div class="mn-form-row">
+                        <div class="mn-form-field"><label>Email</label><input type="email" name="email_from" placeholder="your@email.com"/></div>
                         <div class="mn-form-field"><label>WhatsApp / WeChat</label><input type="text" name="phone" placeholder="+1 000 000 0000"/></div>
-                        <div class="mn-form-field">
-                            <label>Group Size</label>
-                            <select name="company_name">
-                                <option value="">Select size</option>
-                                <option value="1 person">1 person</option>
-                                <option value="2 people">2 people</option>
-                                <option value="3 people">3 people</option>
-                                <option value="4 people">4 people</option>
-                                <option value="5+ people">5+ people</option>
-                            </select>
-                        </div>
                     </div>
-                    <div class="mn-form-field"><label>Message</label><textarea name="description" rows="4" placeholder="Tell us about your group, preferred dates, and any questions&#8230;"/></div>
+                    <div class="mn-form-field"><label>Message</label><textarea name="description" rows="5" placeholder="Tell us about your group size, preferred dates, route of interest, and any questions&#8230;"/></div>
+                    <div class="mn-form-apply-hint">
+                        <span>Ready to go further?</span>
+                        <button type="button" class="mn-text-link mn-apply-btn">Complete a full application &#8594;</button>
+                    </div>
                     <button type="submit" class="mn-btn-submit"><span class="lang-en">Send Enquiry &#8594;</span><span class="lang-mn">Хүсэлт илгээх &#8594;</span></button>
                 </form>
 
@@ -665,6 +998,13 @@
             </a>
         </div>
     </section>
+
+    <!-- Floating CTA — appears after scrolling past hero -->
+    <button type="button" id="mn-fab" class="mn-fab mn-apply-btn" aria-label="Apply for expedition">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <span class="lang-en">Apply</span>
+        <span class="lang-mn">Хүсэлт</span>
+    </button>
 
     <t t-call="minuru_website.apply_modal"/>
     <t t-call="minuru_website.shared_footer"/>
@@ -813,40 +1153,9 @@
         <div class="mn-nav-inner">
             <a href="/" class="mn-nav-logo">MINURU</a>
             <ul class="mn-nav-links">
-                <li class="mn-has-mega">
-                    <a href="/#expeditions" class="mn-nav-link">
-                        <span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span>
-                        <svg class="mn-nav-chevron" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true">
-                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                    <div class="mn-mega">
-                        <div class="mn-mega-inner">
-                            <div class="mn-mega-links">
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">01</span><div><p class="mn-mega-name">Gobi Expedition</p><p class="mn-mega-tag">7&#8211;9 days &#183; Entry Level</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">02</span><div><p class="mn-mega-name">Altai Expedition</p><p class="mn-mega-tag">8&#8211;10 days &#183; Advanced</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">03</span><div><p class="mn-mega-name">Khuvsgul Expedition</p><p class="mn-mega-tag">7&#8211;9 days &#183; Relaxed</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">04</span><div><p class="mn-mega-name">Central Mongolia</p><p class="mn-mega-tag">6&#8211;8 days &#183; Culture</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">05</span><div><p class="mn-mega-name">Eastern Steppe</p><p class="mn-mega-tag">7&#8211;9 days &#183; Off-Grid</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">06</span><div><p class="mn-mega-name">Gobi&#8211;Altai</p><p class="mn-mega-tag">9&#8211;10 days &#183; Long Route</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">07</span><div><p class="mn-mega-name">Western Mongolia</p><p class="mn-mega-tag">9&#8211;10 days &#183; Remote</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">08</span><div><p class="mn-mega-name">Northern Mongolia</p><p class="mn-mega-tag">7&#8211;9 days &#183; Forest</p></div></a>
-                                <a href="/#expeditions" class="mn-mega-item"><span class="mn-mega-num">09</span><div><p class="mn-mega-name">Steppe &amp; Lake</p><p class="mn-mega-tag">7&#8211;9 days &#183; Relaxed</p></div></a>
-                            </div>
-                            <div class="mn-mega-feature">
-                                <img src="/minuru_website/static/src/img/gobi_01.png" alt="Gobi Expedition" class="mn-mega-feat-img"
-                                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600'"/>
-                                <div class="mn-mega-feat-text">
-                                    <p class="mn-mega-feat-label">Most Popular</p>
-                                    <p class="mn-mega-feat-title">Gobi Expedition</p>
-                                    <a href="/#contact" class="mn-mega-feat-link">Apply Now &#8594;</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="/#experience" class="mn-nav-link"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></a></li>
                 <li><a href="/#routes"     class="mn-nav-link"><span class="lang-en">Routes</span><span class="lang-mn">Маршрут</span></a></li>
+                <li><a href="/#expeditions" class="mn-nav-link"><span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span></a></li>
+                <li><a href="/#experience" class="mn-nav-link"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></a></li>
                 <li><a href="/#fleet"      class="mn-nav-link"><span class="lang-en">Fleet</span><span class="lang-mn">Машинууд</span></a></li>
                 <li><a href="/#gallery"    class="mn-nav-link"><span class="lang-en">Gallery</span><span class="lang-mn">Галерей</span></a></li>
                 <li><a href="/#about"      class="mn-nav-link"><span class="lang-en">About</span><span class="lang-mn">Бидний тухай</span></a></li>
@@ -865,9 +1174,9 @@
             <span class="mn-mobile-logo">MINURU</span>
             <button id="mn-mobile-close" class="mn-mobile-close" aria-label="Close">&#10005;</button>
         </div>
+        <a href="/#routes"      class="mn-mobile-link"><span class="lang-en">Routes</span><span class="lang-mn">Маршрут</span></a>
         <a href="/#expeditions" class="mn-mobile-link"><span class="lang-en">Expeditions</span><span class="lang-mn">Аяллууд</span></a>
         <a href="/#experience"  class="mn-mobile-link"><span class="lang-en">Experience</span><span class="lang-mn">Туршлага</span></a>
-        <a href="/#routes"      class="mn-mobile-link"><span class="lang-en">Routes</span><span class="lang-mn">Маршрут</span></a>
         <a href="/#fleet"       class="mn-mobile-link"><span class="lang-en">Fleet</span><span class="lang-mn">Машинууд</span></a>
         <a href="/#gallery"     class="mn-mobile-link"><span class="lang-en">Gallery</span><span class="lang-mn">Галерей</span></a>
         <a href="/#about"       class="mn-mobile-link"><span class="lang-en">About</span><span class="lang-mn">Бидний тухай</span></a>
@@ -902,6 +1211,7 @@
                 <p class="mn-modal-success-text"><span class="lang-en">Thank you. Our team will contact you within 24&#8211;48 hours.</span><span class="lang-mn">Баярлалаа. Манай баг 24&#8211;48 цагийн дотор холбогдоно.</span></p>
             </div>
             <form id="mn-apply-form" class="mn-modal-body" novalidate="novalidate">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                 <div class="mn-modal-step active" data-step="1">
                     <p class="mn-modal-step-label">01 / 04</p>
                     <h3 class="mn-modal-step-title"><span class="lang-en">Personal Information</span><span class="lang-mn">Хувийн мэдээлэл</span></h3>
